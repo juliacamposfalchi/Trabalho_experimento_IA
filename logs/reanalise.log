@@ -1,0 +1,61 @@
+﻿                              cer  cer_ci    wer  wer_ci
+ferramenta condicao                                     
+EasyOCR    baixa_resolucao  0.586   0.578  0.833   0.830
+           original         0.251   0.199  0.514   0.485
+           rotacao_5graus   0.740   0.719  0.948   0.942
+           ruido_gaussiano  0.262   0.210  0.538   0.503
+           sal_pimenta      0.519   0.486  0.859   0.854
+PaddleOCR  baixa_resolucao  0.311   0.282  0.495   0.477
+           original         0.242   0.201  0.315   0.266
+           rotacao_5graus   0.291   0.262  0.359   0.324
+           ruido_gaussiano  0.226   0.188  0.318   0.273
+           sal_pimenta      0.359   0.321  0.479   0.443
+Tesseract  baixa_resolucao  0.500   0.458  0.615   0.584
+           original         0.168   0.110  0.280   0.212
+           rotacao_5graus   0.335   0.275  0.527   0.456
+           ruido_gaussiano  0.232   0.192  0.330   0.283
+           sal_pimenta      0.465   0.430  0.837   0.821
+docTR      baixa_resolucao  0.372   0.343  0.631   0.616
+           original         0.233   0.192  0.417   0.367
+           rotacao_5graus   0.669   0.650  0.849   0.839
+           ruido_gaussiano  0.242   0.201  0.439   0.391
+           sal_pimenta      0.402   0.363  0.760   0.737
+           tipo metrica                                comparacao   media  ic_inf  ic_sup     n  p_bruto  p_bonf  media_dif  mediana_dif
+0   IC_original     cer                                 Tesseract  0.1681  0.0886  0.2636   NaN      NaN     NaN        NaN          NaN
+1   IC_original     cer                                 PaddleOCR  0.2422  0.1514  0.3413   NaN      NaN     NaN        NaN          NaN
+2   IC_original     cer                                   EasyOCR  0.2507  0.1760  0.3345   NaN      NaN     NaN        NaN          NaN
+3   IC_original     cer                                     docTR  0.2326  0.1308  0.3480   NaN      NaN     NaN        NaN          NaN
+4            H1     cer            Tesseract < EasyOCR (original)     NaN -0.1371 -0.0243  40.0   0.0000  0.0000    -0.0826      -0.0468
+5            H1     cer            PaddleOCR < EasyOCR (original)     NaN -0.0802  0.0601  40.0   0.2859  0.5717    -0.0086      -0.0254
+6            H2     cer  perda por rotacao: Tesseract > PaddleOCR     NaN  0.0400  0.2037  40.0   0.0040  0.0079     0.1182       0.0316
+7            H2     cer    perda por rotacao: EasyOCR > PaddleOCR     NaN  0.3615  0.5188  40.0   0.0000  0.0000     0.4406       0.5682
+8   IC_original  cer_ci                                 Tesseract  0.1096  0.0518  0.1858   NaN      NaN     NaN        NaN          NaN
+9   IC_original  cer_ci                                 PaddleOCR  0.2009  0.1208  0.2923   NaN      NaN     NaN        NaN          NaN
+10  IC_original  cer_ci                                   EasyOCR  0.1991  0.1435  0.2623   NaN      NaN     NaN        NaN          NaN
+11  IC_original  cer_ci                                     docTR  0.1918  0.0957  0.3045   NaN      NaN     NaN        NaN          NaN
+12           H1  cer_ci            Tesseract < EasyOCR (original)     NaN -0.1435 -0.0323  40.0   0.0000  0.0000    -0.0896      -0.0785
+13           H1  cer_ci            PaddleOCR < EasyOCR (original)     NaN -0.0743  0.0801  40.0   0.3232  0.6463     0.0018      -0.0261
+14           H2  cer_ci  perda por rotacao: Tesseract > PaddleOCR     NaN  0.0218  0.1918  40.0   0.0083  0.0165     0.1049       0.0380
+15           H2  cer_ci    perda por rotacao: EasyOCR > PaddleOCR     NaN  0.3846  0.5300  40.0   0.0000  0.0000     0.4591       0.5660
+16  IC_original     wer                                 Tesseract  0.2802  0.1896  0.3814   NaN      NaN     NaN        NaN          NaN
+17  IC_original     wer                                 PaddleOCR  0.3152  0.2208  0.4168   NaN      NaN     NaN        NaN          NaN
+18  IC_original     wer                                   EasyOCR  0.5144  0.4109  0.6188   NaN      NaN     NaN        NaN          NaN
+19  IC_original     wer                                     docTR  0.4169  0.3273  0.5135   NaN      NaN     NaN        NaN          NaN
+20           H1     wer            Tesseract < EasyOCR (original)     NaN -0.3113 -0.1615  40.0   0.0000  0.0000    -0.2342      -0.1462
+21           H1     wer            PaddleOCR < EasyOCR (original)     NaN -0.2928 -0.1114  40.0   0.0000  0.0000    -0.1992      -0.1268
+22           H2     wer  perda por rotacao: Tesseract > PaddleOCR     NaN  0.1323  0.2824  40.0   0.0000  0.0000     0.2039       0.1272
+23           H2     wer    perda por rotacao: EasyOCR > PaddleOCR     NaN  0.2876  0.4896  40.0   0.0000  0.0000     0.3905       0.4397
+24  IC_original  wer_ci                                 Tesseract  0.2125  0.1485  0.2874   NaN      NaN     NaN        NaN          NaN
+25  IC_original  wer_ci                                 PaddleOCR  0.2658  0.1861  0.3552   NaN      NaN     NaN        NaN          NaN
+26  IC_original  wer_ci                                   EasyOCR  0.4846  0.3890  0.5791   NaN      NaN     NaN        NaN          NaN
+27  IC_original  wer_ci                                     docTR  0.3668  0.2850  0.4594   NaN      NaN     NaN        NaN          NaN
+28           H1  wer_ci            Tesseract < EasyOCR (original)     NaN -0.3501 -0.1993  40.0   0.0000  0.0000    -0.2722      -0.2543
+29           H1  wer_ci            PaddleOCR < EasyOCR (original)     NaN -0.3159 -0.1292  40.0   0.0000  0.0000    -0.2188      -0.1357
+30           H2  wer_ci  perda por rotacao: Tesseract > PaddleOCR     NaN  0.1064  0.2692  40.0   0.0000  0.0000     0.1848       0.1201
+31           H2  wer_ci    perda por rotacao: EasyOCR > PaddleOCR     NaN  0.2971  0.4978  40.0   0.0000  0.0000     0.3993       0.4420
+sessao      inicial(29)  retomada(11)
+ferramenta                           
+EasyOCR            8.30          8.80
+PaddleOCR         25.85         26.87
+Tesseract          0.74          0.85
+docTR              5.61          4.97

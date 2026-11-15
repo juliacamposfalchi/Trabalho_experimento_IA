@@ -1,0 +1,9 @@
+﻿wsl.exe : WARNING: python-doctr 1.1.0 does not provide the extra 'torch'
+No linha:3 caractere:1
++ wsl.exe -d Ubuntu-24.04 -- bash "$sp/setup_wsl3.sh" *> $log
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: python...e extra 'torch':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+imports ok
+== SETUP3_OK ==

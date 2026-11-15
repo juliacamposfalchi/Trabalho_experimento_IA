@@ -1,0 +1,8 @@
+## Triagem 70 15 imagens: 0
+## Duplicados removidos 8 4 imagens: 0
+## PRISMA 31 3 imagens: 0
+## Critérios 8 2 imagens: 0
+## Outras fontes 6 6 imagens: 0
+['Nº', 'ID (CAPES/OpenAlex)', 'Exportação(ões)', 'Título', 'Autores', 'Ano', 'Periódico', 'DOI', 'Sugestão preliminar (por título)', 'Código sugerido', 'Motivo da sugestão', 'Decisão (título/resumo)', 'Decisão (texto completo)', 'Motivo final (E1 a E6)', 'Observações']
+Counter({'Excluir': 62, 'Incluir': 7})
+Counter({None: 62, 'Excluir': 6, 'Incluir': 1})

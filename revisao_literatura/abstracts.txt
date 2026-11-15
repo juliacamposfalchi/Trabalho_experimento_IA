@@ -1,0 +1,207 @@
+## YOLOv8 and Faster R-CNN Performance Evaluation with Super-resolution in License Plate Recognition
+(sem resumo)
+
+## Lipi Gnani
+(sem resumo)
+
+## IMPLEMENTASI ALGORITMA YOLO DAN TESSERACT OCR PADA SISTEM DETEKSI PLAT NOMOR OTOMATIS
+(sem resumo)
+
+## End to End Invoice Processing Application Based on Key Fields Extraction
+(sem resumo)
+
+## Optical character recognition with neural networks and post-correction with finite state methods
+(sem resumo)
+
+## The Design of a C1 Document Data Extraction Application Using a Tesseract-Optical Character Recognition Engine
+(sem resumo)
+
+## TreeRipper web application: towards a fully automated optical tree recognition software
+(sem resumo)
+
+## Towards a scientific workflow featuring Natural Language Processing for the digitisation of natural history collections
+(sem resumo)
+
+## Enhancing optical character recognition: Efficient techniques for document layout analysis and text line detection
+(sem resumo)
+
+## Efficient and effective OCR engine training
+(sem resumo)
+
+## Characterizing Natural Hydrogen Occurrences in the Paris Basin From Historical Drilling Records
+(sem resumo)
+
+## A Study of Automatic Recognition and Localization of Pipeline for Ground Penetrating Radar Based on Deep Learning
+(sem resumo)
+
+## Research on an Algorithm of Express Parcel Sorting Based on Deeper Learning and Multi-Information Recognition
+(sem resumo)
+
+## A novel stock counting system for detecting lot numbers using Tesseract OCR
+(sem resumo)
+
+## Advanced Driver Assistance Systems (ADAS) Based on Machine Learning Techniques for the Detection and Transcription of Variable Message Signs on Roads
+(sem resumo)
+
+## DLI-IT: a deep learning approach to drug label identification through image and text embedding
+(sem resumo)
+
+## Design of An Electronic Narrator on Assistant Robot for Blind People
+(sem resumo)
+
+## Using a Haar wavelet transform, principal component analysis and neural networks for OCR in the presence of impulse noise
+(sem resumo)
+
+## RECOGNITION DESIGN OF LICENSE PLATE AND CAR TYPE USING TESSERACT OCR AND EmguCV
+(sem resumo)
+
+## Aplikasi Penerjemah Bahasa Inggris – Indonesia dengan Optical Character Recognition Berbasis Android
+(sem resumo)
+
+## Vision-based patient identification recognition based on image content analysis and support vector machine for medical information system
+(sem resumo)
+
+## Implementation of OCR (Optical Character Recognition) Using Tesseract in Detecting Character in Quotes Text Images
+(sem resumo)
+
+## Khmer printed character recognition using attention-based Seq2Seq network
+(sem resumo)
+
+## Research and implementation of license plate recognition based on android platform
+(sem resumo)
+
+## Key Frame Extraction for Text Based Video Retrieval Using Maximally Stable Extremal Regions
+(sem resumo)
+
+## Backpropagation Neural Network for Book Classification Using the Image Cover
+(sem resumo)
+
+## Artificial Intelligence Enabled Smart Refrigeration Management System Using Internet of Things Framework
+(sem resumo)
+
+## Balinese Script Recognition Using Tesseract Mobile Framework
+(sem resumo)
+
+## Plate Number Recognition based on Hybrid Techniques
+(sem resumo)
+
+## A deep learning model for Ottoman  OCR
+(sem resumo)
+
+## A review of algorithms for text detection in images and videos
+(sem resumo)
+
+## Exchanging image processing and OCR components in a Setswana digitisation pipeline
+(sem resumo)
+
+## Name the Name
+(sem resumo)
+
+## Supervised OCR Post-Correction of Historical Swedish Texts
+(sem resumo)
+
+## ANALYSIS OF IMAGE PREPROCESSING TECHNIQUES TO IMPROVE OCR OF GARHWALI TEXT OBTAINED USING THE HINDI TESSERACT MODEL
+(sem resumo)
+
+## Prediction of the Optical Character Recognition Accuracy based on the Combined Assessment of Image Binarization Results
+(sem resumo)
+
+## COMPARISON OF THRESHOLDING OTSU AND MORPHOLOGY OPENING PREPROCESSOR FOR IMAGE TEXT DETECTION USING TESSERACT
+(sem resumo)
+
+## Reichsanzeiger-GT: An OCR ground truth dataset based on the historical newspaper “Deutscher Reichsanzeiger und Preußischer Staatsanzeiger” (German Imp
+(sem resumo)
+
+## An Identification Method for Irregular Components Related to Terminal Blocks in Equipment Cabinet of Power Substation
+(sem resumo)
+
+## Meta-analysis of organic chromium dietary supplementation on growth performance, carcass traits, and serum metabolites of lambs
+(sem resumo)
+
+## Artificially Intelligent Readers: An Adaptive Framework for Original Handwritten Numerical Digits Recognition with OCR Methods
+(sem resumo)
+
+## An Efficient Unsupervised Approach for OCR Error Correction of Vietnamese OCR Text
+(sem resumo)
+
+## COME: Clip-OCR and Master ObjEct for text image captioning
+(sem resumo)
+
+## Optimal Pricing and Quality Decisions in Supply Chains With Consumers’ Anticipated Regret and Online Celebrity Retailers
+(sem resumo)
+
+## OCR post-correction for detecting adversarial text images
+(sem resumo)
+
+## Cell-intrinsic Wnt4 ligand regulates mitochondrial oxidative phosphorylation in macrophages
+(sem resumo)
+
+## Outpatient Cardiac Rehabilitation Suppresses Deterioration of Renal Function in Patients ≥75 Years of Age With Heart Disease
+(sem resumo)
+
+## Persistence and adherence to ocrelizumab compared with other disease-modifying therapies for multiple sclerosis in U.S. commercial claims data
+(sem resumo)
+
+## Anesthetic Impacts on the Oculocardiac Reflex: Evidence from a Large, Observational Study
+(sem resumo)
+
+## Real-world experience of ocrelizumab initiation in a diverse multiple sclerosis population
+(sem resumo)
+
+## MMU-OCR-21: Towards End-to-End Urdu Text Recognition Using Deep Learning
+(sem resumo)
+
+## Alternative Splicing of the Cardiac Sodium Channel in Pulmonary Arterial Hypertension
+(sem resumo)
+
+## Building an efficient OCR system for historical documents with little training data
+(sem resumo)
+
+## Effect of ocrelizumab on vaccine responses in patients with multiple sclerosis
+(sem resumo)
+
+## Organizational silence, organizational commitment and creativity: The case of directors of Islamic Azad University of Khorasan Razavi
+(sem resumo)
+
+## Biphasic effect of metformin on human cardiac energetics
+(sem resumo)
+
+## &amp;lt;p&amp;gt;The Impact of Re-Operation, Relatives and Race on the Oculocardiac Reflex During Strabismus Surgery&amp;lt;/p&amp;gt;
+(sem resumo)
+
+## Work Productivity Outcomes Associated with Ocrelizumab Compared with Other Disease-Modifying Therapies for Multiple Sclerosis
+(sem resumo)
+
+## Dual-emissive, oxygen-sensing boron nanoparticles quantify oxygen consumption rate in breast cancer cells
+(sem resumo)
+
+## Dual inhibition of the terminal oxidases eradicates antibiotic‐tolerant Mycobacterium tuberculosis
+(sem resumo)
+
+## Printed Persian OCR system using deep learning
+(sem resumo)
+
+## Synergism of open chromatin regions involved in regulating genes in Bombyx mori
+(sem resumo)
+
+## The oculocardiac reflex and depth of anesthesia measured by brain wave
+(sem resumo)
+
+## Metabolism‐induced oxidative stress and DNA damage selectively trigger genome instability in polyploid fungal cells
+(sem resumo)
+
+## Impact of Statins on Cellular Respiration and De-Differentiation of Myofibroblasts in Human Failing Hearts
+(sem resumo)
+
+## The importance of functional and emotional content in online consumer reviews for product sales: Evidence from the mobile gaming market
+(sem resumo)
+
+## Experimental investigation and theoretical analysis of oil circulation rates in ejector cooling cycles
+(sem resumo)
+
+## Prognostic Factors of Pediatric Revision Ossicular Chain Reconstruction
+(sem resumo)
+
+## Surgical factors affecting oculocardiac reflex during strabismus surgery
+(sem resumo)
+

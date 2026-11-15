@@ -1,0 +1,19 @@
+﻿== micromamba + tesseract (conda-forge) ==
+total 1948
+drwxr-xr-x 2 juliafalchi juliafalchi    4096 Nov 10 20:29 .
+drwxr-xr-x 5 juliafalchi juliafalchi    4096 Nov 10 20:29 ..
+-rw-r--r-- 1 juliafalchi juliafalchi 1982756 Nov 10 20:29 por.traineddata
+tesseract 5.5.3
+ leptonica-1.87.0
+== venv + pacotes python (torch CPU) ==
+The virtual environment was not created successfully because ensurepip is not
+available.  On Debian/Ubuntu systems, you need to install the python3-venv
+package using the following command.
+
+    apt install python3.12-venv
+
+You may need to use sudo with that command.  After installing the python3-venv
+package, recreate your virtual environment.
+
+Failing command: /home/juliafalchi/ocrtest/venv/bin/python3
+

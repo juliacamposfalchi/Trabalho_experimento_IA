@@ -1,0 +1,16 @@
+condicao,comparacao,n,diff_media_cer,p_bruto,p_bonferroni
+original,Tesseract vs EasyOCR,40,0.0826,0.0,0.0002
+original,Tesseract vs PaddleOCR,40,0.074,0.1701,1.0
+original,Tesseract vs docTR,40,0.0644,0.0092,0.1386
+ruido_gaussiano,Tesseract vs EasyOCR,40,0.0301,0.1,1.0
+ruido_gaussiano,Tesseract vs PaddleOCR,40,-0.0055,0.6368,1.0
+ruido_gaussiano,Tesseract vs docTR,40,0.0099,0.4728,1.0
+sal_pimenta,Tesseract vs EasyOCR,40,0.0538,0.0147,0.2202
+sal_pimenta,Tesseract vs PaddleOCR,40,-0.1065,0.0259,0.3885
+sal_pimenta,Tesseract vs docTR,40,-0.0636,0.0682,1.0
+rotacao_5graus,Tesseract vs EasyOCR,40,0.405,0.0,0.0
+rotacao_5graus,Tesseract vs PaddleOCR,40,-0.0442,0.6753,1.0
+rotacao_5graus,Tesseract vs docTR,40,0.3334,0.0,0.0
+baixa_resolucao,Tesseract vs EasyOCR,40,0.0857,0.0466,0.6992
+baixa_resolucao,Tesseract vs PaddleOCR,40,-0.1888,0.0009,0.0134
+baixa_resolucao,Tesseract vs docTR,40,-0.1283,0.0368,0.5527

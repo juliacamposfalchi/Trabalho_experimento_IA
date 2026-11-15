@@ -1,0 +1,206 @@
+COMPARAÇÃO DE FERRAMENTAS DE OCR DE CÓDIGO ABERTO EM CPU PARA DOCUMENTOS EM PORTUGUÊS: ERRO DE CARACTERES, ERRO DE PALAVRAS E ROBUSTEZ A DEGRADAÇÕES
+
+Instituto de Pesquisas Tecnológicas do Estado de São Paulo (IPT)
+
+RESUMO
+A escolha de uma ferramenta de OCR de código aberto depende do tipo de documento e do custo computacional, e há poucas comparações em português por CER e WER em CPU. Este trabalho comparou Tesseract, EasyOCR, PaddleOCR e docTR em 40 páginas em português do DharmaOCR-Benchmark, em condição original e sob ruído gaussiano, ruído sal e pimenta, rotação de 5 graus e redução de resolução, com intervalos de confiança por bootstrap e testes de Wilcoxon pareados. Na condição original, o Tesseract teve o menor CER médio (0,168) e o EasyOCR o maior (0,251), e o PaddleOCR teve WER menor que o do EasyOCR (0,315 contra 0,514), sem diferença de CER. A rotação de 5 graus elevou o CER do EasyOCR a 0,740 e o do Tesseract a 0,335, contra 0,291 no PaddleOCR. A mediana do tempo por página foi de 2,1 s no Tesseract e de 57,7 s no PaddleOCR. Os resultados valem para uma amostra pequena, uma única máquina e configurações padrão, e os grupos por tipo de documento são exploratórios.
+
+Palavras-chave: reconhecimento óptico de caracteres; OCR; Tesseract; EasyOCR; PaddleOCR; docTR; documentos em português.
+
+1 INTRODUÇÃO
+
+O reconhecimento óptico de caracteres (*Optical Character Recognition*, OCR) converte a imagem de um documento em texto passível de busca, edição e análise. Em serviços públicos e em organizações privadas, grande parte dos documentos ainda circula em papel ou em imagens digitalizadas, de modo que a qualidade da extração de texto condiciona etapas posteriores, como a indexação, a consulta e a auditoria (Kapelinski et al., 2026).
+
+A escolha da ferramenta de OCR, entretanto, não é trivial. Existem motores de código aberto de gerações distintas, como o Tesseract (Smith, 2007), o EasyOCR, o PaddleOCR e o docTR, que diferem na arquitetura, no custo computacional e na sensibilidade à qualidade da imagem. Estudos comparativos recentes indicam que o desempenho depende fortemente do tipo de documento e das condições de captura. Em rótulos de embalagens fotografados com telefone, por exemplo, o Tesseract obteve a menor taxa de erro de caracteres e o menor tempo médio por imagem entre quatro ferramentas, enquanto o PaddleOCR foi o mais lento em CPU (Nagayi et al., 2025). Em um cenário de tecnologia assistiva, a acurácia diminuiu com o aumento da velocidade de caminhada e do ângulo de visada (Feng et al., 2026).
+
+Para o português do Brasil, o trabalho mais próximo é o de Kapelinski et al. (2026), que comparou 14 motores abertos em formulários, documentos de identidade, prosa limpa e páginas degradadas, e mediu o custo de execução local. Os autores observaram que nenhuma classe de motor vence em todos os tipos de documento e que os motores clássicos mais antigos perdem muito desempenho diante de ruído impulsivo e de rotação. Esse estudo, contudo, reporta a distância de edição normalizada e a recuperação de valores de campo, e não as taxas de erro de caracteres e de palavras, que são as métricas mais difundidas na avaliação de OCR. Além disso, as ferramentas foram executadas em configurações em que os motores de visão e linguagem utilizam GPU, ao passo que muitas instituições dispõem apenas de CPU.
+
+Diante desse contexto, torna-se pertinente comparar, em cenário restrito a CPU, as ferramentas de OCR de código aberto mais utilizadas na extração de texto de páginas em português, por meio das taxas de erro de caracteres (*Character Error Rate*, CER) e de palavras (*Word Error Rate*, WER), e verificar se degradações controladas da imagem alteram essa comparação. Assim, o presente trabalho posiciona-se como replicação parcial e extensão de Kapelinski et al. (2026), ao adotar métricas diferentes, restringir a execução à CPU e analisar de forma exploratória documentos jurídicos e administrativos.
+
+1.1 Hipótese, questões de pesquisa e objetivos
+
+Parte-se da hipótese de que, em cenário restrito a CPU e com configurações padrão, as ferramentas avaliadas (Tesseract, EasyOCR, PaddleOCR e docTR) não apresentam desempenho equivalente na extração de texto de páginas de documentos em português, e de que esse desempenho é afetado de forma desigual por degradações controladas da imagem. Essa hipótese desdobra-se em duas hipóteses específicas:
+
+H1. Em páginas sem degradação, o Tesseract e o PaddleOCR apresentam CER e WER menores que o EasyOCR (hipótese nula: não há diferença entre as ferramentas).
+
+H2. A rotação da imagem aumenta o CER e o WER do Tesseract e do EasyOCR em magnitude maior do que no PaddleOCR (hipótese nula: o aumento é equivalente entre as ferramentas).
+
+A questão principal que orienta o estudo é: como se comparam, em CER e WER, o Tesseract, o EasyOCR, o PaddleOCR e o docTR na extração de texto de páginas de documentos em português, executados em CPU, e em que medida degradações controladas da imagem alteram essa comparação?
+
+Dela decorrem as seguintes questões derivadas:
+a) Que diferenças de CER e WER existem entre as ferramentas em páginas sem degradação?
+b) Como o ruído gaussiano, o ruído sal e pimenta, a rotação e a redução de resolução alteram o CER e o WER de cada ferramenta?
+c) A perda de desempenho entre a condição original e as condições degradadas é equivalente entre as ferramentas?
+d) Qual é a mediana do tempo de processamento por página de cada ferramenta em CPU?
+e) O desempenho observado em documentos jurídicos e administrativos difere do observado nos demais documentos da amostra?
+
+O objetivo geral é comparar o desempenho do Tesseract, do EasyOCR, do PaddleOCR e do docTR, executados em CPU, na extração de texto de páginas de documentos em português, por meio de CER e WER, em condições original e degradadas, de forma reprodutível e com código e dados disponibilizados.
+
+Os objetivos específicos são:
+a) selecionar uma amostra de páginas impressas em português do conjunto DharmaOCR-Benchmark, excluindo os documentos manuscritos;
+b) implementar um protocolo experimental único, com o mesmo pré-processamento, versões fixas das ferramentas e a mesma normalização de texto para todas;
+c) gerar condições de degradação controladas (ruído gaussiano, ruído sal e pimenta, rotação e redução de resolução), aplicadas à mesma imagem para todas as ferramentas;
+d) calcular o CER e o WER por página, com intervalos de confiança por *bootstrap* e testes estatísticos pareados;
+e) medir a mediana do tempo de processamento por página em CPU;
+f) analisar de forma exploratória o desempenho nos documentos jurídicos e administrativos, separadamente dos demais;
+g) disponibilizar o código, a amostra e os resultados em repositório público.
+
+O estudo não avalia reconhecimento de texto manuscrito, modelos de visão e linguagem, execução em GPU nem ajuste fino das ferramentas. O restante do artigo está organizado da seguinte forma: a Seção 2 apresenta a revisão da literatura, a Seção 3 descreve o método, a Seção 4 apresenta os resultados, a Seção 5 discute os resultados e as limitações, e a Seção 6 apresenta as conclusões.
+
+2 REVISÃO DA LITERATURA
+
+2.1 Estratégia de busca e seleção
+
+A revisão da literatura é parcial, com uma única base e uma única pessoa na triagem, e seguiu as recomendações do PRISMA 2020 na medida do possível. A busca em base de dados foi realizada no Portal de Periódicos da CAPES em 10 de novembro de 2026, com três cadeias de busca sobre OCR, as ferramentas Tesseract, EasyOCR, PaddleOCR e docTR e comparação ou avaliação [registrar a cadeia exata de cada uma das três buscas no repositório]. Como a busca na base retornou poucos estudos comparativos, ela foi complementada por uma busca na web e no arXiv, não sistemática, que não teve o número de resultados registrado e, por isso, é apresentada apenas pelos relatos que avaliou. Foram elegíveis os estudos publicados de 2018 a 2026, em inglês ou português, que comparassem duas ou mais ferramentas de OCR com métrica quantitativa em imagens de documentos ou de texto impresso. Foram excluídos os estudos centrados em manuscrito, os que propunham um modelo sem comparação, as aplicações de uma única ferramenta, os de pós-correção, legendagem ou detecção sem avaliação de reconhecimento e os duplicados.
+
+Na base, foram identificados 76 registros, dos quais 69 permaneceram após a remoção de 7 duplicados. As exportações da base não traziam resumo, de modo que a triagem dos 69 registros foi feita pelo título: 62 foram excluídos (29 por estarem fora do tema, como estudos de oncologia e cardiologia que casaram com a sigla OCR, 18 por aplicarem uma única ferramenta, 7 por proporem modelo sem comparação, 7 por tratarem de pós-correção, legendagem ou detecção sem avaliação de reconhecimento e 1 por ter manuscrito como foco) e 7 seguiram para avaliação detalhada, feita pelo resumo e pelos metadados, e não pelo texto completo. Desses 7, 6 foram excluídos (três por avaliarem apenas o Tesseract, com diferentes pré-processamentos ou uma métrica de previsão, dois por proporem fluxo de treinamento ou métodos novos sem comparação e um por não tratar de OCR no resumo) e 1 foi incluído (Kotzé; Wolff, 2020). Da busca complementar, foram avaliados 5 relatos, dos quais 4 foram incluídos (Kapelinski et al., 2026; Nagayi et al., 2025; Feng et al., 2026; Gómez Rey et al., 2026) e 1 foi excluído por tratar de tradução de imagens com texto. Ao todo, 5 estudos foram incluídos na revisão. [Inserir o diagrama PRISMA 2020 com esses números, que constam na aba PRISMA do arquivo triagem_prisma_ocr.xlsx.] Dos estudos incluídos, apenas Kapelinski et al. (2026) e Nagayi et al. (2025) tiveram o texto lido de forma extensa, e os demais foram lidos pelo resumo. [Ler os PDFs de Feng et al., de Gómez Rey et al. e de Kotzé e Wolff antes da submissão.]
+
+2.2 Comparações entre ferramentas de OCR
+
+[Revisar este parágrafo com os estudos que você efetivamente incluir.] Kapelinski et al. (2026) avaliaram 14 motores abertos, sendo oito modelos de visão e linguagem e seis motores de OCR (Tesseract, EasyOCR, docTR, RapidOCR, PaddleOCR e Surya), em formulários e documentos de identidade brasileiros, em páginas literárias limpas e em páginas degradadas, com métricas de recuperação de valores de campo e de distância de edição normalizada e com a mediana do tempo por página. Os autores concluem que apenas o Surya e o modelo Qwen2.5-VL se mantêm em todos os tipos de documento, que os motores clássicos mais antigos (Tesseract e EasyOCR) colapsam em fotos de documentos de identidade, em ruído impulsivo e em rotação, e que a escolha do motor deve seguir o tipo de documento. Entre as limitações, os autores citam as amostras de 50 documentos nos formulários e nas identidades, o gold dos formulários reconstruído por um modelo multimodal e o custo medido em uma única máquina.
+
+Nagayi et al. (2025) compararam Tesseract, EasyOCR, PaddleOCR e TrOCR em 1.628 imagens de rótulos de embalagens de alimentos sul-africanas, com acurácia avaliada em 113 imagens transcritas. O Tesseract obteve o menor CER médio (0,912) e o menor tempo médio por imagem (0,58 s), e o PaddleOCR o maior tempo (6,24 s em CPU). Os valores de CER acima de 1,0 decorrem de inserções em referências curtas, e o pré-processamento diferiu entre as ferramentas, o que limita a comparação direta. Feng et al. (2026) avaliaram Google Vision, PaddleOCR, EasyOCR e Tesseract em condições de captura em movimento, com acurácia por caractere, e relataram que o Google Vision foi o mais acurado, seguido do PaddleOCR entre as ferramentas abertas, e que a acurácia diminuiu com o aumento da velocidade e do ângulo de visada. Gómez Rey et al. (2026) compararam 13 abordagens de digitalização de fontes historiográficas com CER e WER e observaram que a pós-correção por modelos de linguagem não trouxe ganho sistemático. Kotzé e Wolff (2020) compararam o Calamari e o Tesseract 3 em documentos em setswana, com redução do CER na combinação do Calamari com pré-processamento de imagem.
+
+2.3 Pré-processamento e degradações
+
+Diversos trabalhos tratam da influência do pré-processamento da imagem sobre o OCR, em geral com uma única ferramenta. Sugiarto e Santosa (2024) comparam binarização de Otsu e operações morfológicas como pré-processamento para o Tesseract. Rawat, Sharma e Gusain (2021) analisam técnicas de pré-processamento em textos impressos em garhwali fotografados com câmeras de resoluções distintas, com acurácia de 88,13% (alta resolução, binarização de Otsu) e de 87,44% (baixa resolução, com super-resolução). Lech e Okarma (2015) propõem uma métrica combinada para prever a acurácia do Tesseract a partir da qualidade da binarização. Esses estudos indicam que a qualidade da imagem condiciona o resultado, mas não comparam, sob as mesmas degradações, ferramentas de arquiteturas distintas.
+
+2.4 Lacuna
+
+Na literatura revisada, as comparações em português com degradações controladas concentram-se em Kapelinski et al. (2026), que adota distância de edição normalizada e recuperação de campos. Permanece sem resposta, no que foi levantado, a comparação das ferramentas por CER e WER em cenário restrito a CPU, com testes estatísticos pareados e intervalos de confiança, em páginas em português que incluem documentos jurídicos e administrativos. [Revisar esta frase conforme os estudos incluídos na triagem.]
+
+3 MÉTODO
+
+3.1 Desenho do estudo
+
+O estudo é um experimento controlado, de natureza quantitativa, em que as mesmas imagens, degradadas de forma idêntica, são processadas por todas as ferramentas, com o mesmo pré-processamento, a mesma normalização do texto e o mesmo ambiente de execução. O código e a amostra estão disponíveis em [URL do repositório no GitHub].
+
+3.2 Dados
+
+Utilizou-se o DharmaOCR-Benchmark (Cardoso et al., 2026), conjunto público de 496 páginas em português do Brasil, composto por páginas impressas da ESTER-Pt (Santos et al., 2023), documentos jurídicos e administrativos e páginas manuscritas. A transcrição de referência de cada página está disponível no próprio conjunto. Foi selecionada uma amostra aleatória de 40 páginas (semente 42). A ordem de sorteio foi fixada sobre todo o conjunto, de modo que a exclusão de uma página apenas desloca as seguintes da fila. Foram excluídas oito páginas manuscritas (identificadores 39, 43, 87, 110, 219, 305, 313 e 345), reconhecidas por inspeção visual de uma montagem das imagens candidatas, por tratarem de reconhecimento de escrita à mão, que está fora do escopo, e uma página quase vazia (identificador 214, referência de oito caracteres), em que o CER é instável. As 40 páginas têm largura mediana de 1.182 pixels e altura mediana de 1.797 pixels (máximo de 3.889 por 5.792 pixels), e as referências têm mediana de 3.444 caracteres (mínimo de 606 e máximo de 10.261).
+
+Como o conjunto não traz uma coluna com o subconjunto de origem, as páginas foram classificadas em três grupos por regras simples: referência sem quebra de linha (23 páginas, que aparentam ser texto corrido renderizado e, por isso, aqui chamadas de texto corrido sem quebras), documentos reais com palavras-chave de aparência jurídica ou administrativa (10 páginas) e demais documentos reais (7 páginas). Essa classificação não substitui a conferência página a página, que não foi feita [confirmar visualmente antes da submissão]. As imagens foram processadas no tamanho original, sem redimensionamento. Em um teste piloto com 8 páginas, a redução do maior lado para 2.000 pixels tornou ilegíveis as páginas de maior resolução (por exemplo, o CER do Tesseract em uma página de 2.824 por 4.268 pixels passou de 0,10 para 1,00), o que levou a manter a resolução original.
+
+3.3 Ferramentas
+
+Foram avaliados o Tesseract (versão 5.5.3, modelo de língua portuguesa, acessado por pytesseract 0.3.13), o EasyOCR (versão 1.7.2, idioma português), o PaddleOCR (versão 3.7.0, com PaddlePaddle 3.3.1, idioma português, com o oneDNN desativado por incompatibilidade em CPU) e o docTR (versão 1.1.0, modelos pré-treinados padrão). O Surya não foi incluído. Todas as ferramentas foram usadas com os modelos e parâmetros padrão dos fabricantes, sem ajuste fino. A execução foi restrita à CPU, com a GPU ocultada do ambiente, em Python 3.12.16, sobre o WSL2 (Ubuntu 24.04) em Windows 11, com 14 núcleos lógicos e 7 fios nas bibliotecas baseadas em PyTorch. [Preencher o modelo do processador e a memória, que o código não registra.] As versões constam no arquivo de registro do ambiente gerado pelo código.
+
+3.4 Condições de degradação
+
+Cada página foi avaliada em cinco condições, aplicadas à mesma imagem para todas as ferramentas: original; ruído gaussiano (desvio padrão de 25 níveis de cinza); ruído sal e pimenta (5% dos pixels, metade pretos e metade brancos); rotação de 5 graus; e redução de resolução (redução a 40% do tamanho seguida de ampliação ao tamanho original). Os parâmetros foram definidos de forma exploratória, e a semente do gerador aleatório foi fixada para permitir a reprodução. [Se os parâmetros forem calibrados, descrever o critério.]
+
+3.5 Normalização e métricas
+
+O texto reconhecido e a transcrição de referência foram normalizados da mesma forma (normalização Unicode NFC e colapso de espaços e quebras de linha em um único espaço). O CER e o WER foram calculados com a distância de edição de Levenshtein, em nível de caracteres e de palavras, respectivamente, dividida pelo tamanho da referência, por meio da biblioteca jiwer 4.0.0. Como o numerador inclui inserções, o CER e o WER podem ultrapassar 1,0, o que ocorre quando a ferramenta insere mais texto do que o existente na referência. O tempo foi medido como a mediana do tempo de processamento por página, após um aquecimento de cada modelo, com os modelos carregados uma única vez.
+
+Após a primeira inspeção dos resultados, observou-se que várias páginas aparecem em caixa alta na imagem, enquanto a referência está em caixa mista, de modo que uma ferramenta que lê corretamente o texto é penalizada por diferença de maiúsculas. Por isso, calcularam-se também o CER e o WER sem distinção entre maiúsculas e minúsculas (conversão por casefold antes da normalização). Essa análise é adicional e foi decidida depois de ver os dados. As métricas principais, nas quais as hipóteses foram testadas, continuam sendo as que distinguem a caixa, e a análise adicional serve para verificar se as conclusões se mantêm.
+
+O experimento foi executado em duas sessões na mesma máquina: as 29 primeiras páginas (em ordem de identificador) e as 11 últimas, após a retomada da execução interrompida por reinício do ambiente. Os resultados das páginas já concluídas foram preservados, e a mediana do tempo por megapixel foi comparada entre as sessões.
+
+3.6 Análise estatística
+
+Para cada ferramenta e condição, calcularam-se a média de CER e de WER e o intervalo de confiança de 95% por *bootstrap* percentílico, com 10.000 reamostragens (Efron; Tibshirani, 1993). As hipóteses foram testadas com o teste de Wilcoxon para amostras pareadas (Wilcoxon, 1945), unilateral, pareado por página. Na H1, comparou-se o CER e o WER do Tesseract e do PaddleOCR com os do EasyOCR na condição original. Na H2, comparou-se, para cada página, a perda de desempenho na rotação (métrica na rotação menos métrica no original) do Tesseract e do EasyOCR com a do PaddleOCR. Aplicou-se a correção de Bonferroni dentro de cada hipótese (dois testes por métrica, com o valor p multiplicado por dois), e a hipótese foi considerada apoiada quando o valor p corrigido foi inferior a 0,05 e o intervalo de confiança da diferença esteve do lado esperado. A análise por tipo de documento é exploratória e não tem correção entre grupos.
+
+4 RESULTADOS
+
+4.1 Amostra e execução
+
+A amostra final tem 40 páginas, das quais 23 têm referência sem quebra de linha, 10 têm palavras-chave de documento jurídico ou administrativo e 7 são demais documentos reais. Cada página foi processada por quatro ferramentas em cinco condições, o que resulta em 800 execuções, todas concluídas. O CER não ultrapassou 1,0 em nenhuma execução, mas o WER ultrapassou 1,0 em 6 execuções do EasyOCR, 4 do PaddleOCR, 13 do Tesseract e 7 do docTR. Houve saída vazia em 35 execuções: 19 do docTR, 13 do Tesseract e 3 do PaddleOCR (nenhuma do EasyOCR), concentradas em 12 páginas, sobretudo nas imagens de 2.824 por 4.268 pixels (identificadores 0144, 0192, 0204 e 0264, em que o texto ocupa uma faixa pequena da página). Na condição original, a saída foi vazia para o Tesseract em 2 páginas (0144 e 0204) e para o docTR em 4 (0144, 0192, 0204 e 0264). Essas páginas foram mantidas na análise, com CER igual a 1,0.
+
+4.2 Condição original e hipótese H1
+
+A Tabela 1 apresenta o CER e o WER médios, com intervalo de confiança de 95%, na condição original. O Tesseract obteve o menor CER médio (0,168) e o menor WER médio (0,280), e o EasyOCR obteve o maior CER (0,251) e o maior WER (0,514). Os intervalos de confiança do CER das quatro ferramentas se sobrepõem em grande parte. As medianas são muito menores que as médias (CER mediano de 0,024 no Tesseract, 0,054 no docTR, 0,096 no PaddleOCR e 0,134 no EasyOCR), o que indica distribuições assimétricas, com poucas páginas de erro muito alto. Por página, o Tesseract e o PaddleOCR tiveram o menor CER em 15 páginas cada, o docTR em 7 e o EasyOCR em 3 (os empates entram em mais de uma contagem).
+
+Tabela 1. CER e WER médios na condição original (n = 40 páginas), com IC95% por bootstrap.
+Ferramenta   CER [IC95%]              WER [IC95%]
+Tesseract    0,168 [0,089; 0,264]     0,280 [0,191; 0,385]
+docTR        0,233 [0,132; 0,349]     0,417 [0,328; 0,516]
+PaddleOCR    0,242 [0,154; 0,344]     0,315 [0,222; 0,420]
+EasyOCR      0,251 [0,175; 0,334]     0,514 [0,412; 0,620]
+
+Na H1, o CER do Tesseract foi menor que o do EasyOCR (diferença média de -0,083; IC95% de -0,139 a -0,025; valor p corrigido inferior a 0,001), e o WER também (-0,234; IC95% de -0,313 a -0,164; p corrigido inferior a 0,001). O PaddleOCR teve WER menor que o do EasyOCR (-0,199; IC95% de -0,291 a -0,114; p corrigido de 0,0001), mas o CER não diferiu (-0,009; IC95% de -0,078 a 0,062; p corrigido de 1,0). Assim, a H1 foi apoiada para o Tesseract em CER e WER e para o PaddleOCR apenas em WER. Com o CER sem distinção de maiúsculas, os resultados foram os mesmos: o CER médio do Tesseract passou a 0,110, o do EasyOCR a 0,199, o do PaddleOCR a 0,201 e o do docTR a 0,192, e o PaddleOCR continuou sem diferir do EasyOCR (p corrigido de 0,65).
+
+4.3 Condições degradadas e hipótese H2
+
+A Tabela 2 apresenta o CER médio por ferramenta e condição, e a Figura 1 (resultados/cer_por_condicao.png) o mesmo resultado em gráfico. A rotação de 5 graus elevou o CER médio do EasyOCR de 0,251 para 0,740 e o do docTR de 0,233 para 0,669, e o WER dessas ferramentas passou a 0,948 e 0,849. No PaddleOCR, o CER passou de 0,242 para 0,291, e no Tesseract, de 0,168 para 0,335. O ruído sal e pimenta elevou o WER do Tesseract de 0,280 para 0,838, e o do EasyOCR de 0,514 para 0,859, enquanto o do PaddleOCR passou de 0,315 para 0,479. A redução de resolução elevou o CER do EasyOCR a 0,586 e o do Tesseract a 0,500, contra 0,311 do PaddleOCR. O ruído gaussiano alterou pouco o CER de todas as ferramentas (variações de -0,016 no PaddleOCR a +0,064 no Tesseract).
+
+Tabela 2. CER médio por ferramenta e condição, com IC95% (n = 40 páginas).
+Ferramenta   Original              Ruído gaussiano       Sal e pimenta         Rotação 5 graus       Baixa resolução
+Tesseract    0,168 [0,089; 0,264]  0,232 [0,128; 0,350]  0,465 [0,392; 0,542]  0,335 [0,239; 0,440]  0,500 [0,371; 0,631]
+docTR        0,233 [0,132; 0,349]  0,242 [0,142; 0,358]  0,402 [0,300; 0,513]  0,669 [0,619; 0,723]  0,372 [0,269; 0,482]
+PaddleOCR    0,242 [0,154; 0,344]  0,226 [0,137; 0,329]  0,359 [0,247; 0,476]  0,291 [0,191; 0,403]  0,311 [0,218; 0,414]
+EasyOCR      0,251 [0,175; 0,334]  0,262 [0,183; 0,348]  0,519 [0,429; 0,610]  0,740 [0,724; 0,758]  0,586 [0,481; 0,692]
+
+Na H2, a perda de CER por rotação do Tesseract foi maior que a do PaddleOCR (diferença média de 0,118; IC95% de 0,039 a 0,202; p corrigido de 0,016), e a do EasyOCR também (0,441; IC95% de 0,359 a 0,518; p corrigido inferior a 0,001). No WER, as diferenças foram de 0,204 (IC95% de 0,132 a 0,282) para o Tesseract e de 0,391 (IC95% de 0,288 a 0,490) para o EasyOCR, ambas com p corrigido inferior a 0,001. A H2 foi, portanto, apoiada em CER e WER. A diferença mediana entre o Tesseract e o PaddleOCR no CER (0,032) é muito menor que a média, o que indica que o efeito se concentra em parte das páginas. Com o CER sem distinção de maiúsculas, as conclusões se mantiveram (p corrigido de 0,017 para o Tesseract e inferior a 0,001 para o EasyOCR).
+
+4.4 Tempo de processamento
+
+A mediana do tempo por página, considerando todas as condições, foi de 2,1 s no Tesseract, 9,4 s no docTR, 21,6 s no EasyOCR e 57,7 s no PaddleOCR. Na condição original, as medianas foram de 1,7 s, 9,7 s, 22,1 s e 60,5 s, respectivamente. A mediana do tempo por megapixel foi semelhante nas duas sessões de execução (por exemplo, 25,9 s por megapixel no PaddleOCR na sessão inicial e 26,9 s na retomada, e 0,74 s e 0,85 s no Tesseract).
+
+4.5 Análise exploratória por tipo de documento
+
+A Tabela 3 apresenta o CER e o WER médios na condição original por grupo. Nos 10 documentos com aparência jurídica ou administrativa, todas as ferramentas tiveram CER médio de até 0,108, e o Tesseract teve o menor (0,026 de CER e 0,051 de WER). Nesse grupo, o PaddleOCR teve CER médio maior que o do EasyOCR (0,108 contra 0,058). Nos 7 demais documentos reais, o PaddleOCR teve o menor CER (0,069) e o menor WER (0,151), e o EasyOCR o maior (0,197 e 0,488). No grupo de 23 páginas com referência sem quebra de linha, o CER médio ficou entre 0,254 (Tesseract) e 0,362 (docTR), e esse grupo inclui as quatro páginas de 2.824 por 4.268 pixels com saída vazia na condição original e as páginas em caixa alta observadas na inspeção (por exemplo, 0393 e 0463). Os testes por grupo, sem correção entre grupos e com n pequeno, estão em resultados/testes_H1_H2.csv e não foram usados para apoiar as hipóteses.
+
+Tabela 3. CER e WER médios na condição original, por grupo.
+Grupo (n)                              Ferramenta   CER     WER
+Jurídico ou administrativo (10)        Tesseract    0,026   0,051
+                                       docTR        0,048   0,211
+                                       EasyOCR      0,058   0,160
+                                       PaddleOCR    0,108   0,126
+Demais documentos reais (7)            PaddleOCR    0,069   0,151
+                                       docTR        0,071   0,264
+                                       Tesseract    0,090   0,229
+                                       EasyOCR      0,197   0,488
+Sem quebra de linha na referência (23) Tesseract    0,254   0,396
+                                       EasyOCR      0,351   0,677
+                                       PaddleOCR    0,353   0,447
+                                       docTR        0,362   0,553
+
+5 DISCUSSÃO
+
+A H1 foi apoiada em parte. O Tesseract teve CER e WER menores que os do EasyOCR, e o PaddleOCR teve WER menor, mas não CER. O PaddleOCR teve CER entre 0,81 e 0,97 em cinco páginas de 2.824 por 4.268 pixels (0091, 0144, 0192, 0204 e 0264), o que eleva a média e pode explicar a ausência de diferença de CER em relação ao EasyOCR. Essa explicação é uma hipótese, que este estudo não testou. A H2 foi apoiada: a rotação de 5 graus prejudicou muito mais o EasyOCR e o Tesseract do que o PaddleOCR. Um resultado não previsto foi o do docTR, cujo CER médio passou de 0,233 para 0,669 com a mesma rotação, comportamento semelhante ao do EasyOCR. Como a H2 não incluía o docTR, essa comparação não foi testada formalmente.
+
+O padrão geral é compatível com o de Kapelinski et al. (2026), que relataram que os motores clássicos mais antigos perdem muito desempenho com ruído impulsivo e rotação: no presente estudo, o EasyOCR e o Tesseract tiveram aumento expressivo de WER com o ruído sal e pimenta (de 0,514 para 0,859 e de 0,280 para 0,838) e o EasyOCR colapsou com a rotação (CER de 0,740), ao passo que o Tesseract perdeu menos com a rotação (CER de 0,335), o que só em parte concorda com aquele estudo. Porém, as métricas (CER e WER contra distância de edição normalizada), os conjuntos de dados e as condições de degradação diferem, de modo que a comparação vale apenas quanto à direção dos efeitos, e não aos valores. Quanto ao tempo, o Tesseract foi o mais rápido e o PaddleOCR o mais lento em CPU, o que concorda com Nagayi et al. (2025), em que o Tesseract também teve o menor CER e o menor tempo e o PaddleOCR o maior tempo, embora em outro material (rótulos de embalagens fotografados). As causas dessas diferenças não foram investigadas. Podem estar na arquitetura de cada ferramenta (por exemplo, a presença ou não de correção de inclinação ou de modelos de orientação), no tamanho dos modelos padrão ou no tratamento de páginas grandes, e a confirmação exigiria experimentos que isolem cada fator.
+
+Os resultados mostram também que a ordem das ferramentas depende do tipo de página. Nos documentos jurídicos e administrativos, o Tesseract teve o menor erro, e o PaddleOCR teve o maior CER, ao passo que, nos demais documentos reais, o PaddleOCR teve o menor. Como esses grupos têm 10 e 7 páginas e a classificação foi feita por palavras-chave, a análise é exploratória, e não se pode afirmar que o desempenho em documentos jurídicos difere do restante.
+Em termos práticos, para quem dispõe apenas de CPU, o Tesseract processou uma página em cerca de 2 s, ao passo que o PaddleOCR levou cerca de 58 s, uma razão de cerca de 27 vezes, sem que o PaddleOCR tivesse CER menor que o do Tesseract em média. O PaddleOCR mostrou, em compensação, a menor perda diante da rotação e da redução de resolução. Assim, para páginas digitalizadas de boa qualidade e alinhadas, o Tesseract é uma opção rápida e competitiva neste conjunto, enquanto, para páginas inclinadas ou de baixa resolução, o PaddleOCR perdeu menos desempenho, ao custo de maior tempo. Essas recomendações valem para esta amostra e esta máquina.
+
+5.1 Limitações
+
+Este estudo apresenta limitações que delimitam a interpretação dos resultados. A amostra tem 40 páginas, e os intervalos de confiança são amplos (por exemplo, de 0,089 a 0,264 no CER do Tesseract), em especial nos grupos da análise exploratória, que têm 10, 7 e 23 páginas. Parte das páginas provém da ESTER-Pt, que também compõe o estudo de Kapelinski et al. (2026), de modo que os dados não são totalmente independentes dos daquele trabalho, e o grupo de documentos jurídicos e administrativos é pequeno. A classificação por tipo de documento foi feita por palavras-chave e pela ausência de quebra de linha na referência, não foi conferida página a página e pode conter erros. Páginas em caixa alta com referência em caixa mista elevam o CER e o WER das métricas principais, e por isso se acrescentou a análise sem distinção de maiúsculas, decidida depois de ver os dados. Como a ordem de execução e o ambiente não foram randomizados, as 11 últimas páginas rodaram em outra sessão, embora o tempo por megapixel tenha sido semelhante. Há ainda 35 execuções com saída vazia, mantidas na análise, que se concentram nas imagens de maior resolução, nas quais o texto ocupa uma pequena parte da página, e o resultado dessas páginas depende de não se ter redimensionado nem recortado a imagem. As degradações foram sintéticas e seus parâmetros, definidos de forma exploratória. A desativação do oneDNN no PaddleOCR e o número de fios usados por cada biblioteca são condições do ambiente que podem afetar o tempo. Os tempos foram medidos em uma única máquina, em CPU, e não se generalizam para outro hardware. Utilizaram-se os modelos padrão, sem ajuste fino, e o docTR pode perder acentos por limitação do vocabulário dos modelos pré-treinados [confirmar nos resultados]. A revisão da literatura é parcial, com uma única base (Periódicos CAPES), triagem por título feita por uma só pessoa, busca complementar não sistemática e restrita ao inglês e ao português, e sem leitura do texto completo de parte dos estudos incluídos. Por fim, o estudo não avalia modelos de visão e linguagem nem texto manuscrito.
+
+6 CONCLUSÃO
+
+Este trabalho comparou o Tesseract, o EasyOCR, o PaddleOCR e o docTR, executados em CPU, na extração de texto de 40 páginas em português, por meio de CER e WER, em condição original e sob quatro degradações. Na condição original, o Tesseract teve o menor CER médio (0,168) e o menor WER médio (0,280), e o EasyOCR os maiores (0,251 e 0,514), embora os intervalos de confiança do CER se sobreponham em grande parte. A hipótese H1 foi apoiada para o Tesseract em CER e WER e para o PaddleOCR apenas em WER. A hipótese H2 foi apoiada: a rotação de 5 graus elevou o CER do EasyOCR de 0,251 para 0,740 e o do Tesseract de 0,168 para 0,335, contra 0,242 para 0,291 no PaddleOCR. O docTR também teve forte aumento de CER com a rotação (0,233 para 0,669). Em tempo, a mediana por página foi de 2,1 s no Tesseract e de 57,7 s no PaddleOCR.
+
+A contribuição do trabalho é um protocolo reprodutível, com CER e WER, intervalos de confiança por bootstrap e testes pareados, em cenário restrito a CPU e para páginas em português, com código e resultados disponibilizados em [URL do repositório]. As conclusões se limitam a uma amostra de 40 páginas, a uma única máquina e às configurações padrão das ferramentas, e a ordem das ferramentas variou conforme o tipo de página, o que exige cautela na generalização. Como trabalhos futuros, indicam-se a inclusão do Surya e de modelos de visão e linguagem, a ampliação da amostra e dos tipos de documento, a conferência visual da classificação por tipo, o tratamento de páginas de alta resolução com texto pequeno, a calibração dos parâmetros de degradação e a medida do uso de memória.
+
+REFERÊNCIAS
+
+CARDOSO et al. DharmaOCR: specialized small language models for structured OCR that outperform open-source and commercial baselines. arXiv:2604.14314, 2026. Conjunto DharmaOCR-Benchmark disponível em: https://huggingface.co/datasets/dharma-ai/DharmaOCR-Benchmark. [Confirmar a lista completa de autores no arXiv.]
+
+EFRON, B.; TIBSHIRANI, R. J. An introduction to the bootstrap. New York: Chapman & Hall, 1993.
+
+FENG, J.; BALLEM, N.; BEHESHTI, M.; HAMILTON-FLETCHER, G.; HUDSON, T.; PORFIRI, M.; SEIPLE, W. H.; RIZZO, J.-R. Evaluating OCR performance for assistive technology: effects of walking speed, camera placement, and camera type. arXiv:2602.02223, 2026.
+
+GÓMEZ REY, M.; CALLEJO, P.; MUÑOZ-ORGANERO, M.; ALARIO-HOYOS, C. A comparative evaluation of digitization pipelines for historiographical sources. arXiv:2608.24976, 2026.
+
+KAPELINSKI, C.; LUNKES, A.; WELFER, D.; SCHMIDT, D.; MACHADO, B.; KREUTZ, D. Reading Brazil: a local cost-versus-accuracy benchmark of open OCR engines on Brazilian documents. In: ENCONTRO NACIONAL DE INTELIGÊNCIA ARTIFICIAL E COMPUTACIONAL (ENIAC), 23., 2026. DOI: 10.5753/eniac.2026.31378. Código e dados em: https://gitlab.com/cristhianavila.aluno/ocr-ptbr-benchmark
+
+KOTZÉ, G. J.; WOLFF, F. Exchanging image processing and OCR components in a Setswana digitisation pipeline. South African Computer Journal, v. 32, n. 2, 2020. DOI: 10.18489/sacj.v32i2.707.
+
+LECH, P.; OKARMA, K. Prediction of the optical character recognition accuracy based on the combined assessment of image binarization results. Elektronika ir Elektrotechnika, v. 21, n. 6, p. 62-65, 2015. DOI: 10.5755/j01.eie.21.6.13764.
+
+NAGAYI, M.; KHAN, A.; FRANK, T.; SWART, R.; NYIRENDA, C. Evaluating OCR performance on food packaging labels in South Africa. arXiv:2510.03570, 2025.
+
+RAWAT, S. S.; SHARMA, A.; GUSAIN, R. Analysis of image preprocessing techniques to improve OCR of Garhwali text obtained using the Hindi Tesseract model. ICTACT Journal on Image and Video Processing, v. 12, n. 2, p. 2588-2594, 2021. DOI: 10.21917/ijivp.2021.0366.
+
+SANTOS, M. K.; BAZZO, G.; OLIVEIRA, L. L. de; MOREIRA, V. P. ESTER-Pt: an evaluation suite for text recognition in Portuguese. In: INTERNATIONAL CONFERENCE ON DOCUMENT ANALYSIS AND RECOGNITION (ICDAR), 2023. Conjunto de dados: https://doi.org/10.5281/zenodo.7872951
+
+SMITH, R. An overview of the Tesseract OCR engine. In: INTERNATIONAL CONFERENCE ON DOCUMENT ANALYSIS AND RECOGNITION (ICDAR), 2007.
+
+SUGIARTO, O. H. R. G.; SANTOSA, Y. P. Comparison of thresholding Otsu and morphology opening preprocessor for image text detection using Tesseract. Proxies: Jurnal Informatika, v. 5, n. 2, p. 118-128, 2024. DOI: 10.24167/proxies.v5i2.12449.
+
+WILCOXON, F. Individual comparisons by ranking methods. Biometrics Bulletin, v. 1, n. 6, p. 80-83, 1945.
+
+Software: EasyOCR (JaidedAI), https://github.com/JaidedAI/EasyOCR; PaddleOCR (PaddlePaddle), https://github.com/PaddlePaddle/PaddleOCR; docTR (Mindee), https://github.com/mindee/doctr; Tesseract OCR, https://github.com/tesseract-ocr/tesseract; jiwer, https://github.com/jitsi/jiwer. [Inserir as versões e as datas de acesso. Citar no corpo do texto, na Seção 3.3, se a norma exigir.]

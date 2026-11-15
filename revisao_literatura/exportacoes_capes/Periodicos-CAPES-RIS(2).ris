@@ -1,0 +1,208 @@
+
+TY  - article
+ID  - W4224229079
+TI  - A deep learning model for Ottoman  OCR 
+AU  - İshak Dölek, Atakan Kurt
+PY  - 2022
+JO  - Concurrency and Computation Practice and Experience
+VL  - 34
+IS  - 20
+SP  - 
+EP  - 
+DO  - 10.1002/cpe.6937
+ER  -
+
+TY  - article
+ID  - W2982358276
+TI  - Efficient and effective OCR engine training
+AU  - Christian Clausner, Apostolos Antonacopoulos, Stefan Pletschacher
+PY  - 2019
+JO  - International Journal on Document Analysis and Recognition (IJDAR)
+VL  - 23
+IS  - 1
+SP  - 73
+EP  - 88
+DO  - 10.1007/s10032-019-00347-8
+ER  -
+
+TY  - article
+ID  - W4389762644
+TI  - Enhancing optical character recognition: Efficient techniques for document layout analysis and text line detection
+AU  - Amirreza Fateh, Mansoor Fateh, Vahid Abolghasemi
+PY  - 2023
+JO  - Engineering Reports
+VL  - 6
+IS  - 9
+SP  - 
+EP  - 
+DO  - 10.1002/eng2.12832
+ER  -
+
+TY  - Revisão
+ID  - W2742651024
+TI  - A review of algorithms for text detection in images and videos
+AU  - Yu. Bolotova, V. Spitsyn, P. Osina
+PY  - 2017
+JO  - Computer Optics
+VL  - 41
+IS  - 3
+SP  - 441
+EP  - 452
+DO  - 10.18287/2412-6179-2017-41-3-441-452
+ER  -
+
+TY  - article
+ID  - W4396237139
+TI  - YOLOv8 and Faster R-CNN Performance Evaluation with Super-resolution in License Plate Recognition
+AU  - Diva Angelika Mulia, Sarah Safitri, I Gede Putra Kusuma Negara
+PY  - 2024
+JO  - International Journal of Computing and Digital Systems
+VL  - 15
+IS  - 1
+SP  - 365
+EP  - 375
+DO  - 10.12785/ijcds/160129
+ER  -
+
+TY  - article
+ID  - W3120871485
+TI  - Exchanging image processing and OCR components in a Setswana digitisation pipeline
+AU  - Gideon Jozua Kotzé, Friedel Wolff
+PY  - 2020
+JO  - South African Computer Journal
+VL  - 32
+IS  - 2
+SP  - 
+EP  - 
+DO  - 10.18489/sacj.v32i2.707
+ER  -
+
+TY  - article
+ID  - W3108992338
+TI  - Backpropagation Neural Network for Book Classification Using the Image Cover
+AU  - I Putu Budhi Darma Purwanta, Ni Putu Novita Puspa Dewi, Cyprianus Kuntoro Adi
+PY  - 2020
+JO  - International Journal of Applied Sciences and Smart Technologies
+VL  - 2
+IS  - 2
+SP  - 89
+EP  - 106
+DO  - 10.24071/ijasst.v2i2.2653
+ER  -
+
+TY  - article
+ID  - W2294484010
+TI  - Key Frame Extraction for Text Based Video Retrieval Using Maximally Stable Extremal Regions
+AU  - Werachard Wattanarachothai, Karn Patanukhom
+PY  - 2015
+JO  - ICST Transactions on e-Education and e-Learning
+VL  - 2
+IS  - 7
+SP  - 
+EP  - 
+DO  - 
+ER  -
+
+TY  - article
+ID  - W4403246668
+TI  - Name the Name
+AU  - Teemu Ruokolainen, Kimmo Kettunen
+PY  - 2020
+JO  - Digital Humanities in the Nordic and Baltic Countries Publications
+VL  - 3
+IS  - 1
+SP  - 137
+EP  - 156
+DO  - 10.5617/dhnbpub.11184
+ER  -
+
+TY  - article
+ID  - W4403246551
+TI  - Supervised OCR Post-Correction of Historical Swedish Texts
+AU  - Dana Dannélls, Simon Persson
+PY  - 2020
+JO  - Digital Humanities in the Nordic and Baltic Countries Publications
+VL  - 3
+IS  - 1
+SP  - 24
+EP  - 37
+DO  - 10.5617/dhnbpub.11176
+ER  -
+
+TY  - article
+ID  - W4403740341
+TI  - ANALYSIS OF IMAGE PREPROCESSING TECHNIQUES TO IMPROVE OCR OF GARHWALI TEXT OBTAINED USING THE HINDI TESSERACT MODEL
+AU  - Sukhbindra Singh Rawat, Ashutosh Sharma, Rachana Gusain
+PY  - 2021
+JO  - ICTACT Journal on Image and Video Processing
+VL  - 12
+IS  - 2
+SP  - 2588
+EP  - 2594
+DO  - 10.21917/ijivp.2021.0366
+ER  -
+
+TY  - article
+ID  - W2203103318
+TI  - Prediction of the Optical Character Recognition Accuracy based on the Combined Assessment of Image Binarization Results
+AU  - Piotr Lech, Krzysztof Okarma
+PY  - 2015
+JO  - Elektronika ir Elektrotechnika
+VL  - 21
+IS  - 6
+SP  - 
+EP  - 
+DO  - 10.5755/j01.eie.21.6.13764
+ER  -
+
+TY  - article
+ID  - W4402012511
+TI  - COMPARISON OF THRESHOLDING OTSU AND MORPHOLOGY OPENING PREPROCESSOR FOR IMAGE TEXT DETECTION USING TESSERACT
+AU  - Oei Hizkia Renat Guntur Sugiarto, Yonathan Purbo Santosa
+PY  - 2024
+JO  - Proxies Jurnal Informatika
+VL  - 5
+IS  - 2
+SP  - 118
+EP  - 128
+DO  - 10.24167/proxies.v5i2.12449
+ER  -
+
+TY  - article
+ID  - W4392560291
+TI  - Reichsanzeiger-GT: An OCR ground truth dataset based on the historical newspaper “Deutscher Reichsanzeiger und Preußischer Staatsanzeiger” (German Imperial Gazette and Prussian Official Gazette) (1819–1945)
+AU  - Thomas Schmidt, Jan Kamlah, Stefan Weil
+PY  - 2024
+JO  - Data in Brief
+VL  - 54
+IS  - 
+SP  - 110274
+EP  - 110274
+DO  - 10.1016/j.dib.2024.110274
+ER  -
+
+TY  - article
+ID  - W4239347571
+TI  - Prediction of the Optical Character Recognition Accuracy based on the Combined Assessment of Image Binarization Results
+AU  - Piotr Lech, Krzysztof Okarma
+PY  - 2015
+JO  - Elektronika ir Elektrotechnika
+VL  - 21
+IS  - 6
+SP  - 62
+EP  - 65
+DO  - 10.5755/j01.eee.21.6.13764
+ER  -
+
+TY  - article
+ID  - W4386525785
+TI  - An Identification Method for Irregular Components Related to Terminal Blocks in Equipment Cabinet of Power Substation
+AU  - Weiguo Cao, Zhong Chen, Xuhui Deng, Congying Wu, Tiecheng Li
+PY  - 2023
+JO  - Sensors
+VL  - 23
+IS  - 18
+SP  - 7739
+EP  - 7739
+DO  - 10.3390/s23187739
+ER  -

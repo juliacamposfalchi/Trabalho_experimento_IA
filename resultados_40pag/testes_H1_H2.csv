@@ -1,0 +1,33 @@
+grupo,hipotese,metrica,comparacao,n,p_bruto,media_dif,mediana_dif,ic95_inf,ic95_sup,p_bonferroni
+todos,H1,cer,Tesseract < EasyOCR (original),40,0.0,-0.0826,-0.0468,-0.1385,-0.0254,0.0
+todos,H1,cer,PaddleOCR < EasyOCR (original),40,0.2859,-0.0086,-0.0254,-0.0777,0.0617,1.0
+todos,H2,cer,perda por rotação: Tesseract > PaddleOCR,40,0.004,0.1182,0.0316,0.0392,0.202,0.0158
+todos,H2,cer,perda por rotação: EasyOCR > PaddleOCR,40,0.0,0.4406,0.5682,0.3592,0.5184,0.0
+todos,H1,wer,Tesseract < EasyOCR (original),40,0.0,-0.2342,-0.1462,-0.3129,-0.1641,0.0
+todos,H1,wer,PaddleOCR < EasyOCR (original),40,0.0,-0.1992,-0.1268,-0.2912,-0.1138,0.0001
+todos,H2,wer,perda por rotação: Tesseract > PaddleOCR,40,0.0,0.2039,0.1272,0.1316,0.282,0.0
+todos,H2,wer,perda por rotação: EasyOCR > PaddleOCR,40,0.0,0.3905,0.4397,0.2876,0.4901,0.0
+exploratorio:real_juridico_provavel,H1,cer,Tesseract < EasyOCR (original),10,0.001,-0.0322,-0.0318,-0.0387,-0.0255,0.0039
+exploratorio:real_juridico_provavel,H1,cer,PaddleOCR < EasyOCR (original),10,0.3477,0.0507,-0.0312,-0.0331,0.1737,1.0
+exploratorio:real_juridico_provavel,H2,cer,perda por rotação: Tesseract > PaddleOCR,10,0.0049,0.0999,0.0405,0.0303,0.1978,0.0195
+exploratorio:real_juridico_provavel,H2,cer,perda por rotação: EasyOCR > PaddleOCR,10,0.001,0.6423,0.6337,0.6143,0.6716,0.0039
+exploratorio:real_juridico_provavel,H1,wer,Tesseract < EasyOCR (original),10,0.001,-0.109,-0.1131,-0.1279,-0.087,0.0039
+exploratorio:real_juridico_provavel,H1,wer,PaddleOCR < EasyOCR (original),10,0.0967,-0.0338,-0.104,-0.1224,0.0861,0.3867
+exploratorio:real_juridico_provavel,H2,wer,perda por rotação: Tesseract > PaddleOCR,10,0.001,0.1934,0.1234,0.1091,0.3299,0.0039
+exploratorio:real_juridico_provavel,H2,wer,perda por rotação: EasyOCR > PaddleOCR,10,0.001,0.7238,0.711,0.6874,0.7651,0.0039
+exploratorio:real_outro,H1,cer,Tesseract < EasyOCR (original),7,0.0078,-0.1073,-0.1185,-0.1329,-0.0761,0.0312
+exploratorio:real_outro,H1,cer,PaddleOCR < EasyOCR (original),7,0.0156,-0.1278,-0.1462,-0.1903,-0.0618,0.0625
+exploratorio:real_outro,H2,cer,perda por rotação: Tesseract > PaddleOCR,7,0.0078,0.2622,0.251,0.0882,0.4831,0.0312
+exploratorio:real_outro,H2,cer,perda por rotação: EasyOCR > PaddleOCR,7,0.0078,0.5352,0.5637,0.4643,0.6078,0.0312
+exploratorio:real_outro,H1,wer,Tesseract < EasyOCR (original),7,0.0078,-0.2594,-0.2704,-0.3112,-0.1854,0.0312
+exploratorio:real_outro,H1,wer,PaddleOCR < EasyOCR (original),7,0.0078,-0.337,-0.3529,-0.4515,-0.2324,0.0312
+exploratorio:real_outro,H2,wer,perda por rotação: Tesseract > PaddleOCR,7,0.0078,0.3398,0.2529,0.1507,0.5669,0.0312
+exploratorio:real_outro,H2,wer,perda por rotação: EasyOCR > PaddleOCR,7,0.0078,0.4339,0.4615,0.2931,0.5711,0.0312
+exploratorio:sintetico_linha_unica,H1,cer,Tesseract < EasyOCR (original),23,0.0056,-0.097,-0.0837,-0.1905,0.0043,0.0223
+exploratorio:sintetico_linha_unica,H1,cer,PaddleOCR < EasyOCR (original),23,0.6455,0.002,-0.0141,-0.1077,0.103,1.0
+exploratorio:sintetico_linha_unica,H2,cer,perda por rotação: Tesseract > PaddleOCR,23,0.1965,0.0823,0.0113,-0.0301,0.2025,0.7861
+exploratorio:sintetico_linha_unica,H2,cer,perda por rotação: EasyOCR > PaddleOCR,23,0.0,0.3241,0.2476,0.2149,0.4421,0.0
+exploratorio:sintetico_linha_unica,H1,wer,Tesseract < EasyOCR (original),23,0.0001,-0.281,-0.2711,-0.4071,-0.1626,0.0004
+exploratorio:sintetico_linha_unica,H1,wer,PaddleOCR < EasyOCR (original),23,0.0034,-0.2292,-0.1214,-0.3653,-0.1052,0.0134
+exploratorio:sintetico_linha_unica,H2,wer,perda por rotação: Tesseract > PaddleOCR,23,0.0019,0.1671,0.102,0.0765,0.266,0.0077
+exploratorio:sintetico_linha_unica,H2,wer,perda por rotação: EasyOCR > PaddleOCR,23,0.0014,0.2324,0.1185,0.1086,0.3694,0.0055

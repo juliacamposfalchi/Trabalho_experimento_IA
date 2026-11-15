@@ -1,0 +1,33 @@
+tipo,metrica,comparacao,media,ic_inf,ic_sup,n,p_bruto,p_bonf,media_dif,mediana_dif
+IC_original,cer,Tesseract,0.1681,0.0886,0.2636,,,,,
+IC_original,cer,PaddleOCR,0.2422,0.1514,0.3413,,,,,
+IC_original,cer,EasyOCR,0.2507,0.176,0.3345,,,,,
+IC_original,cer,docTR,0.2326,0.1308,0.348,,,,,
+H1,cer,Tesseract < EasyOCR (original),,-0.1371,-0.0243,40.0,0.0,0.0,-0.0826,-0.0468
+H1,cer,PaddleOCR < EasyOCR (original),,-0.0802,0.0601,40.0,0.2859,0.5717,-0.0086,-0.0254
+H2,cer,perda por rotacao: Tesseract > PaddleOCR,,0.04,0.2037,40.0,0.004,0.0079,0.1182,0.0316
+H2,cer,perda por rotacao: EasyOCR > PaddleOCR,,0.3615,0.5188,40.0,0.0,0.0,0.4406,0.5682
+IC_original,cer_ci,Tesseract,0.1096,0.0518,0.1858,,,,,
+IC_original,cer_ci,PaddleOCR,0.2009,0.1208,0.2923,,,,,
+IC_original,cer_ci,EasyOCR,0.1991,0.1435,0.2623,,,,,
+IC_original,cer_ci,docTR,0.1918,0.0957,0.3045,,,,,
+H1,cer_ci,Tesseract < EasyOCR (original),,-0.1435,-0.0323,40.0,0.0,0.0,-0.0896,-0.0785
+H1,cer_ci,PaddleOCR < EasyOCR (original),,-0.0743,0.0801,40.0,0.3232,0.6463,0.0018,-0.0261
+H2,cer_ci,perda por rotacao: Tesseract > PaddleOCR,,0.0218,0.1918,40.0,0.0083,0.0165,0.1049,0.038
+H2,cer_ci,perda por rotacao: EasyOCR > PaddleOCR,,0.3846,0.53,40.0,0.0,0.0,0.4591,0.566
+IC_original,wer,Tesseract,0.2802,0.1896,0.3814,,,,,
+IC_original,wer,PaddleOCR,0.3152,0.2208,0.4168,,,,,
+IC_original,wer,EasyOCR,0.5144,0.4109,0.6188,,,,,
+IC_original,wer,docTR,0.4169,0.3273,0.5135,,,,,
+H1,wer,Tesseract < EasyOCR (original),,-0.3113,-0.1615,40.0,0.0,0.0,-0.2342,-0.1462
+H1,wer,PaddleOCR < EasyOCR (original),,-0.2928,-0.1114,40.0,0.0,0.0,-0.1992,-0.1268
+H2,wer,perda por rotacao: Tesseract > PaddleOCR,,0.1323,0.2824,40.0,0.0,0.0,0.2039,0.1272
+H2,wer,perda por rotacao: EasyOCR > PaddleOCR,,0.2876,0.4896,40.0,0.0,0.0,0.3905,0.4397
+IC_original,wer_ci,Tesseract,0.2125,0.1485,0.2874,,,,,
+IC_original,wer_ci,PaddleOCR,0.2658,0.1861,0.3552,,,,,
+IC_original,wer_ci,EasyOCR,0.4846,0.389,0.5791,,,,,
+IC_original,wer_ci,docTR,0.3668,0.285,0.4594,,,,,
+H1,wer_ci,Tesseract < EasyOCR (original),,-0.3501,-0.1993,40.0,0.0,0.0,-0.2722,-0.2543
+H1,wer_ci,PaddleOCR < EasyOCR (original),,-0.3159,-0.1292,40.0,0.0,0.0,-0.2188,-0.1357
+H2,wer_ci,perda por rotacao: Tesseract > PaddleOCR,,0.1064,0.2692,40.0,0.0,0.0,0.1848,0.1201
+H2,wer_ci,perda por rotacao: EasyOCR > PaddleOCR,,0.2971,0.4978,40.0,0.0,0.0,0.3993,0.442

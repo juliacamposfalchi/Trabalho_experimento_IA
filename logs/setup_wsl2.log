@@ -1,0 +1,25 @@
+﻿== python 3.12 via micromamba ==
+== torch CPU ==
+== demais pacotes ==
+wsl.exe : WARNING: python-doctr 1.1.0 does not provide the extra 'torch'
+No linha:3 caractere:1
++ wsl.exe -d Ubuntu-24.04 -- bash "$sp/setup_wsl2.sh" *> $log
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: python...e extra 'torch':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This 
+behaviour is the source of the following dependency conflicts.
+hippunfold 0.5.11 requires pygments, which is not installed.
+copier 9.19.1 requires colorama>=0.4.6, which is not installed.
+copier 9.19.1 requires pygments>=2.7.1, which is not installed.
+snakemake 9.27.0 requires jsonschema, which is not installed.
+datasets                              5.2.0
+easyocr                               1.7.2
+jiwer                                 4.0.0
+paddleocr                             3.7.0
+paddlepaddle                          3.3.1
+pytesseract                           0.3.13
+python-doctr                          1.1.0
+torch                                 2.14.1
+== SETUP_OK ==

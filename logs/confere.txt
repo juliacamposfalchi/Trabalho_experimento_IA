@@ -1,0 +1,47 @@
+Leia-me 20 2 0
+Triagem 70 15 0
+Duplicados removidos 8 4 0
+PRISMA 31 3 0
+Critérios 8 2 0
+Outras fontes 6 6 0
+Resumo por condição1 46 8 0
+Resultados 801 9 0
+Resumo por condição 46 8 0
+Resumo por tipo 15 11 0
+IC bootstrap 41 7 0
+Testes H1 H2 33 11 0
+Testes sem caixa 33 11 0
+Manifesto 41 6 0
+Referências 41 4 0
+Saídas do OCR 801 4 0
+Ambiente 19 2 0
+Gráfico CER 1 1 1
+Diagrama PRISMA 1 1 1
+Artigo (rascunho) 206 1 0
+Protocolo 75 1 0
+Extração CAPES 23 1 0
+Extração web 71 1 0
+(None, None, 'cer', 'cer', 'wer', 'wer', 'tempo_s', 'tempo_s')
+(None, None, 'mean', 'std', 'mean', 'std', 'mean', 'std')
+('ferramenta', 'condicao', None, None, None, None, None, None)
+('EasyOCR', 'baixa_resolucao', 0.586, 0.339, 0.833, 0.253, 23.494, 13.778)
+('EasyOCR', 'original', 0.251, 0.258, 0.514, 0.337, 24.757, 16.44)
+('EasyOCR', 'rotacao_5graus', 0.74, 0.054, 0.948, 0.084, 25.318, 18.585)
+['ferramenta', 'condição', 'imagem', 'texto reconhecido']
+Luis x & I (Paris, Vincennes, ) também conhecido como Luis, o Teimoso, fol o Rei
+Luís X & I (Paris,  - Vincennes, ), também conhecido como Luís, o Teimoso, foi o
+(None, None, None)
+('FLUXO PRISMA 2020 (bases + outras fontes)', None, None)
+('Registros identificados nas bases (Periódicos CAPES, 3 buscas)', 76, 'Valor fixo')
+('Removidos como duplicados', '=76-COUNTA(Triagem!B2:B70)', None)
+('Triados por título (resumo ausente nas exportações)', '=COUNTA(Triagem!B2:B70)', None)
+('Excluídos na triagem', '=COUNTIF(Triagem!L2:L70,"Excluir")', None)
+('Avaliados em detalhe (bases)', '=COUNTIF(Triagem!L2:L70,"Incluir")', 'Só resumo e metadados lidos; texto completo não obtido')
+('Excluídos após avaliação (bases)', '=COUNTIF(Triagem!M2:M70,"Excluir")', None)
+('Incluídos vindos das bases', '=COUNTIF(Triagem!M2:M70,"Incluir")', None)
+('Relatos de outras fontes avaliados', "=COUNTA('Outras fontes'!A2:A6)", 'Busca na web, não sistemática')
+('Excluídos de outras fontes', '=COUNTIF(\'Outras fontes\'!E2:E6,"Excluir")', None)
+('Incluídos vindos de outras fontes', '=COUNTIF(\'Outras fontes\'!E2:E6,"Incluir")', None)
+('TOTAL DE ESTUDOS INCLUÍDOS', '=B25+B28', None)
+(None, None, None)
+("As colunas L, M e N da aba Triagem (amarelo) foram preenchidas por IA a partir de título, resumo e metadados. Confira cada uma, e leia os textos completos antes de relatar como 'avaliados'.", None, None)

@@ -1,0 +1,811 @@
+﻿29:N_AMOSTRA = 40
+30:LADO_MAX = None       # redimensiona o maior lado para este valor (px); None mantém o original.
+== inicio: Tue Nov 10 21:29:22 -03 2026 ==
+wsl.exe : Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate 
+limits and faster downloads.
+No linha:7 caractere:1
++ wsl.exe -d Ubuntu-24.04 -- bash "$sp/run40.sh" *> "$spw\run40.log"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: You ar...ster downloads.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Using CPU. Note: This module is much faster with a GPU.
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/ao/nn/quantized/dynamic/modules/rnn.py:162: 
+UserWarning: torch.quantize_per_tensor, torch.quantize_per_channel and other quantized tensor creation functions that 
+produce tensors with dtype torch.quint8, torch.qint8, and torch.qint32 are deprecated and will be removed in a future 
+PyTorch release. Please see https://github.com/pytorch/pytorch/issues/184982 for more information. (Triggered 
+internally at /__w/pytorch/pytorch/aten/src/ATen/quantized/Quantizer.cpp:111.)
+  w_ih = torch.quantize_per_tensor(
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/paddle/utils/cpp_extension/extension_utils.py:712: 
+UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and 
+install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+[32mCreating model: ('PP-LCNet_x1_0_doc_ori', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: 
+`/home/juliafalchi/.paddlex/official_models/PP-LCNet_x1_0_doc_ori`.[0m
+[32mCreating model: ('UVDoc', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: 
+`/home/juliafalchi/.paddlex/official_models/UVDoc`.[0m
+[32mCreating model: ('PP-LCNet_x1_0_textline_ori', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: 
+`/home/juliafalchi/.paddlex/official_models/PP-LCNet_x1_0_textline_ori`.[0m
+[32mCreating model: ('PP-OCRv6_medium_det', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: 
+`/home/juliafalchi/.paddlex/official_models/PP-OCRv6_medium_det`.[0m
+[32mCreating model: ('PP-OCRv6_medium_rec', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: 
+`/home/juliafalchi/.paddlex/official_models/PP-OCRv6_medium_rec`.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+tipo
+sintetico_linha_unica     23
+real_juridico_provavel    10
+real_outro                 7
+Name: count, dtype: int64
+Surya não carregado (confira a API da versão instalada): No module named 'surya'
+[1] 0000.png concluída | 7.1 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[2] 0040.png concluída | 15.4 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[3] 0045.png concluída | 23.0 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[4] 0046.png concluída | 42.9 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[5] 0051.png concluída | 48.0 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[6] 0061.png concluída | 50.0 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+[7] 0091.png concluída | 60.7 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (3889x5792) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (3889x5792) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (3889x5792) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (3889x5792) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (3889x5792) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+[8] 0135.png concluída | 84.9 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+[9] 0144.png concluída | 100.3 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[10] 0156.png concluída | 112.0 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[11] 0180.png concluída | 125.5 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[12] 0185.png concluída | 129.0 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[13] 0191.png concluída | 140.6 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+[14] 0192.png concluída | 159.7 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+[15] 0204.png concluída | 169.5 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[16] 0222.png concluída | 180.6 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[17] 0234.png concluída | 193.2 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[18] 0254.png concluída | 197.1 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (4268x2824) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33mResized image size (2824x4268) exceeds max_side_limit of 4000. Resizing to fit within limit.[0m
+[19] 0264.png concluída | 211.9 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[20] 0268.png concluída | 220.7 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[21] 0288.png concluída | 232.6 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[22] 0299.png concluída | 240.5 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[23] 0319.png concluída | 243.0 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[24] 0324.png concluída | 250.1 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[25] 0336.png concluída | 256.9 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[26] 0337.png concluída | 262.0 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[27] 0354.png concluída | 264.0 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[28] 0356.png concluída | 270.7 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[29] 0358.png concluída | 282.3 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+== retomada: Wed Nov 11 09:46:27 -03 2026 ==
+Using CPU. Note: This module is much faster with a GPU.
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/ao/nn/quantized/dynamic/modules/rnn.py:162: UserWarning: torch.quantize_per_tensor, torch.quantize_per_channel and other quantized tensor creation functions that produce tensors with dtype torch.quint8, torch.qint8, and torch.qint32 are deprecated and will be removed in a future PyTorch release. Please see https://github.com/pytorch/pytorch/issues/184982 for more information. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/quantized/Quantizer.cpp:111.)
+  w_ih = torch.quantize_per_tensor(
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/paddle/utils/cpp_extension/extension_utils.py:712: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+[32mCreating model: ('PP-LCNet_x1_0_doc_ori', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `/home/juliafalchi/.paddlex/official_models/PP-LCNet_x1_0_doc_ori`.[0m
+[32mCreating model: ('UVDoc', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `/home/juliafalchi/.paddlex/official_models/UVDoc`.[0m
+[32mCreating model: ('PP-LCNet_x1_0_textline_ori', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `/home/juliafalchi/.paddlex/official_models/PP-LCNet_x1_0_textline_ori`.[0m
+[32mCreating model: ('PP-OCRv6_medium_det', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `/home/juliafalchi/.paddlex/official_models/PP-OCRv6_medium_det`.[0m
+[32mCreating model: ('PP-OCRv6_medium_rec', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `/home/juliafalchi/.paddlex/official_models/PP-OCRv6_medium_rec`.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+Surya não carregado (confira a API da versão instalada): No module named 'surya'
+Retomando: 29 páginas já concluídas
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[30] 0370.png concluída | 6.0 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[31] 0371.png concluída | 13.6 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[32] 0388.png concluída | 14.9 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[33] 0393.png concluída | 25.2 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[34] 0429.png concluída | 30.6 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[35] 0434.png concluída | 39.0 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[36] 0450.png concluída | 41.6 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[37] 0463.png concluída | 55.1 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[38] 0473.png concluída | 59.9 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[39] 0481.png concluída | 68.7 min
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+[40] 0494.png concluída | 83.8 min
+{
+  "python": "3.12.16",
+  "so": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "cpu": "x86_64",
+  "nucleos_logicos": 14,
+  "gpu_visivel": false,
+  "seed": 42,
+  "n_amostra": 40,
+  "lado_max_px": null,
+  "pacotes": {
+    "pytesseract": "0.3.13",
+    "easyocr": "1.7.2",
+    "paddleocr": "3.7.0",
+    "paddlepaddle": "3.3.1",
+    "python-doctr": "1.1.0",
+    "surya-ocr": null,
+    "jiwer": "4.0.0",
+    "opencv-python-headless": "5.0.0.93"
+  },
+  "tesseract": "5.5.3",
+  "torch_threads": 7
+}
+                              cer           wer        tempo_s        
+                             mean    std   mean    std    mean     std
+ferramenta condicao                                                   
+EasyOCR    baixa_resolucao  0.586  0.339  0.833  0.253  23.494  13.778
+           original         0.251  0.258  0.514  0.337  24.757  16.440
+           rotacao_5graus   0.740  0.054  0.948  0.084  25.318  18.585
+           ruido_gaussiano  0.262  0.267  0.538  0.353  25.615  17.824
+           sal_pimenta      0.519  0.292  0.859  0.182  21.503  13.451
+PaddleOCR  baixa_resolucao  0.311  0.320  0.495  0.344  66.716  39.084
+           original         0.242  0.310  0.315  0.324  68.826  37.747
+           rotacao_5graus   0.291  0.345  0.359  0.343  63.320  38.556
+           ruido_gaussiano  0.226  0.315  0.318  0.322  66.673  41.426
+           sal_pimenta      0.359  0.371  0.479  0.363  59.508  44.206
+Tesseract  baixa_resolucao  0.500  0.421  0.615  0.404   4.241   7.432
+           original         0.168  0.287  0.280  0.312   3.466   5.816
+           rotacao_5graus   0.335  0.323  0.527  0.338   4.762  11.470
+           ruido_gaussiano  0.232  0.364  0.330  0.353   3.800   3.325
+           sal_pimenta      0.465  0.243  0.837  0.139   4.123   6.122
+docTR      baixa_resolucao  0.372  0.347  0.631  0.333  11.043   7.948
+           original         0.233  0.360  0.417  0.310  11.486   8.025
+           rotacao_5graus   0.669  0.170  0.849  0.127  11.459   7.885
+           ruido_gaussiano  0.242  0.358  0.439  0.317  11.136   7.819
+           sal_pimenta      0.402  0.347  0.760  0.205   8.996   6.463
+                                     cer         ...              
+                                    mean    std  ...     std count
+tipo                   ferramenta                ...              
+real_juridico_provavel EasyOCR     0.058  0.028  ...  17.348    10
+                       PaddleOCR   0.108  0.180  ...  34.397    10
+                       Tesseract   0.026  0.031  ...   1.369    10
+                       docTR       0.048  0.030  ...   6.830    10
+real_outro             EasyOCR     0.197  0.105  ...   2.471     7
+                       PaddleOCR   0.069  0.097  ...   7.698     7
+                       Tesseract   0.090  0.102  ...   0.320     7
+                       docTR       0.071  0.083  ...   1.114     7
+sintetico_linha_unica  EasyOCR     0.351  0.293  ...  13.309    23
+                       PaddleOCR   0.353  0.352  ...  28.928    23
+                       Tesseract   0.254  0.352  ...   7.284    23
+                       docTR       0.362  0.432  ...   8.659    23
+
+[12 rows x 9 columns]
+           condicao              comparacao  ...  p_bruto  p_bonferroni
+0          original    Tesseract vs EasyOCR  ...   0.0000        0.0002
+1          original  Tesseract vs PaddleOCR  ...   0.1701        1.0000
+2          original      Tesseract vs docTR  ...   0.0092        0.1386
+3   ruido_gaussiano    Tesseract vs EasyOCR  ...   0.1000        1.0000
+4   ruido_gaussiano  Tesseract vs PaddleOCR  ...   0.6368        1.0000
+5   ruido_gaussiano      Tesseract vs docTR  ...   0.4728        1.0000
+6       sal_pimenta    Tesseract vs EasyOCR  ...   0.0147        0.2202
+7       sal_pimenta  Tesseract vs PaddleOCR  ...   0.0259        0.3885
+8       sal_pimenta      Tesseract vs docTR  ...   0.0682        1.0000
+9    rotacao_5graus    Tesseract vs EasyOCR  ...   0.0000        0.0000
+10   rotacao_5graus  Tesseract vs PaddleOCR  ...   0.6753        1.0000
+11   rotacao_5graus      Tesseract vs docTR  ...   0.0000        0.0000
+12  baixa_resolucao    Tesseract vs EasyOCR  ...   0.0466        0.6992
+13  baixa_resolucao  Tesseract vs PaddleOCR  ...   0.0009        0.0134
+14  baixa_resolucao      Tesseract vs docTR  ...   0.0368        0.5527
+
+[15 rows x 6 columns]
+                                  grupo hipotese metrica                                comparacao   n  p_bruto  media_dif  mediana_dif  ic95_inf  ic95_sup  p_bonferroni
+0                                 todos       H1     cer            Tesseract < EasyOCR (original)  40   0.0000    -0.0826      -0.0468   -0.1385   -0.0254        0.0000
+1                                 todos       H1     cer            PaddleOCR < EasyOCR (original)  40   0.2859    -0.0086      -0.0254   -0.0777    0.0617        1.0000
+2                                 todos       H2     cer  perda por rotação: Tesseract > PaddleOCR  40   0.0040     0.1182       0.0316    0.0392    0.2020        0.0158
+3                                 todos       H2     cer    perda por rotação: EasyOCR > PaddleOCR  40   0.0000     0.4406       0.5682    0.3592    0.5184        0.0000
+4                                 todos       H1     wer            Tesseract < EasyOCR (original)  40   0.0000    -0.2342      -0.1462   -0.3129   -0.1641        0.0000
+5                                 todos       H1     wer            PaddleOCR < EasyOCR (original)  40   0.0000    -0.1992      -0.1268   -0.2912   -0.1138        0.0001
+6                                 todos       H2     wer  perda por rotação: Tesseract > PaddleOCR  40   0.0000     0.2039       0.1272    0.1316    0.2820        0.0000
+7                                 todos       H2     wer    perda por rotação: EasyOCR > PaddleOCR  40   0.0000     0.3905       0.4397    0.2876    0.4901        0.0000
+8   exploratorio:real_juridico_provavel       H1     cer            Tesseract < EasyOCR (original)  10   0.0010    -0.0322      -0.0318   -0.0387   -0.0255        0.0039
+9   exploratorio:real_juridico_provavel       H1     cer            PaddleOCR < EasyOCR (original)  10   0.3477     0.0507      -0.0312   -0.0331    0.1737        1.0000
+10  exploratorio:real_juridico_provavel       H2     cer  perda por rotação: Tesseract > PaddleOCR  10   0.0049     0.0999       0.0405    0.0303    0.1978        0.0195
+11  exploratorio:real_juridico_provavel       H2     cer    perda por rotação: EasyOCR > PaddleOCR  10   0.0010     0.6423       0.6337    0.6143    0.6716        0.0039
+12  exploratorio:real_juridico_provavel       H1     wer            Tesseract < EasyOCR (original)  10   0.0010    -0.1090      -0.1131   -0.1279   -0.0870        0.0039
+13  exploratorio:real_juridico_provavel       H1     wer            PaddleOCR < EasyOCR (original)  10   0.0967    -0.0338      -0.1040   -0.1224    0.0861        0.3867
+14  exploratorio:real_juridico_provavel       H2     wer  perda por rotação: Tesseract > PaddleOCR  10   0.0010     0.1934       0.1234    0.1091    0.3299        0.0039
+15  exploratorio:real_juridico_provavel       H2     wer    perda por rotação: EasyOCR > PaddleOCR  10   0.0010     0.7238       0.7110    0.6874    0.7651        0.0039
+16              exploratorio:real_outro       H1     cer            Tesseract < EasyOCR (original)   7   0.0078    -0.1073      -0.1185   -0.1329   -0.0761        0.0312
+17              exploratorio:real_outro       H1     cer            PaddleOCR < EasyOCR (original)   7   0.0156    -0.1278      -0.1462   -0.1903   -0.0618        0.0625
+18              exploratorio:real_outro       H2     cer  perda por rotação: Tesseract > PaddleOCR   7   0.0078     0.2622       0.2510    0.0882    0.4831        0.0312
+19              exploratorio:real_outro       H2     cer    perda por rotação: EasyOCR > PaddleOCR   7   0.0078     0.5352       0.5637    0.4643    0.6078        0.0312
+20              exploratorio:real_outro       H1     wer            Tesseract < EasyOCR (original)   7   0.0078    -0.2594      -0.2704   -0.3112   -0.1854        0.0312
+21              exploratorio:real_outro       H1     wer            PaddleOCR < EasyOCR (original)   7   0.0078    -0.3370      -0.3529   -0.4515   -0.2324        0.0312
+22              exploratorio:real_outro       H2     wer  perda por rotação: Tesseract > PaddleOCR   7   0.0078     0.3398       0.2529    0.1507    0.5669        0.0312
+23              exploratorio:real_outro       H2     wer    perda por rotação: EasyOCR > PaddleOCR   7   0.0078     0.4339       0.4615    0.2931    0.5711        0.0312
+24   exploratorio:sintetico_linha_unica       H1     cer            Tesseract < EasyOCR (original)  23   0.0056    -0.0970      -0.0837   -0.1905    0.0043        0.0223
+25   exploratorio:sintetico_linha_unica       H1     cer            PaddleOCR < EasyOCR (original)  23   0.6455     0.0020      -0.0141   -0.1077    0.1030        1.0000
+26   exploratorio:sintetico_linha_unica       H2     cer  perda por rotação: Tesseract > PaddleOCR  23   0.1965     0.0823       0.0113   -0.0301    0.2025        0.7861
+27   exploratorio:sintetico_linha_unica       H2     cer    perda por rotação: EasyOCR > PaddleOCR  23   0.0000     0.3241       0.2476    0.2149    0.4421        0.0000
+28   exploratorio:sintetico_linha_unica       H1     wer            Tesseract < EasyOCR (original)  23   0.0001    -0.2810      -0.2711   -0.4071   -0.1626        0.0004
+29   exploratorio:sintetico_linha_unica       H1     wer            PaddleOCR < EasyOCR (original)  23   0.0034    -0.2292      -0.1214   -0.3653   -0.1052        0.0134
+30   exploratorio:sintetico_linha_unica       H2     wer  perda por rotação: Tesseract > PaddleOCR  23   0.0019     0.1671       0.1020    0.0765    0.2660        0.0077
+31   exploratorio:sintetico_linha_unica       H2     wer    perda por rotação: EasyOCR > PaddleOCR  23   0.0014     0.2324       0.1185    0.1086    0.3694        0.0055
+== fim: Wed Nov 11 11:12:11 -03 2026 ==
+== RUN40_DONE ==

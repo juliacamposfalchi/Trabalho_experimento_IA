@@ -1,0 +1,270 @@
+﻿Log de execução do teste do benchmark OCR.
+Ambiente: WSL + Ubuntu 24.04.
+Arquivo original de execução removido do caminho local temporário do ambiente.
+
+No linha:4 caractere:1
++ wsl.exe -d Ubuntu-24.04 -- bash "$sp/run_test.sh" *> "$spw\run_test.l ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (/mnt/c/Users/ju...le or directory:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+29:N_AMOSTRA = 8
+== rodando ==
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits 
+and faster downloads.
+Using CPU. Note: This module is much faster with a GPU.
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/ao/nn/quantized/dynamic/modules/rnn.py:162: 
+UserWarning: torch.quantize_per_tensor, torch.quantize_per_channel and other quantized tensor creation functions that 
+produce tensors with dtype torch.quint8, torch.qint8, and torch.qint32 are deprecated and will be removed in a future 
+PyTorch release. Please see https://github.com/pytorch/pytorch/issues/184982 for more information. (Triggered 
+internally at /__w/pytorch/pytorch/aten/src/ATen/quantized/Quantizer.cpp:111.)
+  w_ih = torch.quantize_per_tensor(
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/paddle/utils/cpp_extension/extension_utils.py:712: 
+UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and 
+install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+[32mCreating model: ('PP-LCNet_x1_0_doc_ori', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: 
+`/home/juliafalchi/.paddlex/official_models/PP-LCNet_x1_0_doc_ori`.[0m
+[32mCreating model: ('UVDoc', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: 
+`/home/juliafalchi/.paddlex/official_models/UVDoc`.[0m
+[32mCreating model: ('PP-LCNet_x1_0_textline_ori', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: 
+`/home/juliafalchi/.paddlex/official_models/PP-LCNet_x1_0_textline_ori`.[0m
+[32mCreating model: ('PP-OCRv6_medium_det', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: 
+`/home/juliafalchi/.paddlex/official_models/PP-OCRv6_medium_det`.[0m
+[32mCreating model: ('PP-OCRv6_medium_rec', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: 
+`/home/juliafalchi/.paddlex/official_models/PP-OCRv6_medium_rec`.[0m
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+/home/juliafalchi/ocrtest/py/lib/python3.12/site-packages/torch/utils/data/dataloader.py:759: UserWarning: 
+'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+tipo
+sintetico_linha_unica     3
+real_outro                3
+real_juridico_provavel    2
+Name: count, dtype: int64
+Surya não carregado (confira a API da versão instalada): No module named 'surya'
+{
+  "python": "3.12.16",
+  "so": "Linux-6.18.40.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "cpu": "x86_64",
+  "nucleos_logicos": 14,
+  "gpu_visivel": false,
+  "seed": 42,
+  "n_amostra": 8,
+  "lado_max_px": 2000,
+  "pacotes": {
+    "pytesseract": "0.3.13",
+    "easyocr": "1.7.2",
+    "paddleocr": "3.7.0",
+    "paddlepaddle": "3.3.1",
+    "python-doctr": "1.1.0",
+    "surya-ocr": null,
+    "jiwer": "4.0.0",
+    "opencv-python-headless": "5.0.0.93"
+  },
+  "tesseract": "5.5.3"
+}
+                              cer           wer        tempo_s        
+                             mean    std   mean    std    mean     std
+ferramenta condicao                                                   
+EasyOCR    baixa_resolucao  0.770  0.381  0.866  0.249   9.312   6.241
+           original         0.558  0.392  0.723  0.384  15.408  11.839
+           rotacao_5graus   0.804  0.077  0.969  0.043  12.784   4.921
+           ruido_gaussiano  0.632  0.449  0.729  0.378  11.372   8.954
+           sal_pimenta      0.729  0.375  0.922  0.118  11.492  10.825
+PaddleOCR  baixa_resolucao  0.585  0.412  0.705  0.396  29.671  19.089
+           original         0.519  0.374  0.650  0.394  38.322  27.572
+           rotacao_5graus   0.539  0.446  0.638  0.442  31.183  20.647
+           ruido_gaussiano  0.561  0.404  0.664  0.419  31.592  21.598
+           sal_pimenta      0.629  0.456  0.693  0.425  25.930  23.854
+Tesseract  baixa_resolucao  0.621  0.407  0.726  0.405   1.354   0.874
+           original         0.578  0.438  0.659  0.443   1.308   0.845
+           rotacao_5graus   0.637  0.485  0.700  0.413   1.089   0.769
+           ruido_gaussiano  0.635  0.479  0.670  0.455   1.473   1.212
+           sal_pimenta      0.673  0.343  0.882  0.172   1.429   0.755
+docTR      baixa_resolucao  0.593  0.415  0.757  0.378   6.355   4.971
+           original         0.455  0.400  0.697  0.386   8.391   7.845
+           rotacao_5graus   0.735  0.178  0.915  0.098   6.879   4.509
+           ruido_gaussiano  0.494  0.408  0.703  0.386   8.464   7.352
+           sal_pimenta      0.663  0.464  0.823  0.258   4.297   4.918
+                                     cer         ...              
+                                    mean    std  ...     std count
+tipo                   ferramenta                ...              
+real_juridico_provavel EasyOCR     0.398  0.498  ...   4.556     2
+                       PaddleOCR   0.383  0.393  ...  16.064     2
+                       Tesseract   0.463  0.645  ...   0.635     2
+                       docTR       0.251  0.311  ...   1.064     2
+real_outro             EasyOCR     0.603  0.427  ...   3.617     3
+                       PaddleOCR   0.422  0.360  ...   8.949     3
+                       Tesseract   0.523  0.462  ...   0.582     3
+                       docTR       0.359  0.288  ...   1.168     3
+sintetico_linha_unica  EasyOCR     0.620  0.445  ...  15.112     3
+                       PaddleOCR   0.706  0.446  ...  36.479     3
+                       Tesseract   0.710  0.455  ...   1.037     3
+                       docTR       0.688  0.540  ...  14.516     3
+
+[12 rows x 9 columns]
+           condicao              comparacao  ...  p_bruto  p_bonferroni
+0          original    Tesseract vs EasyOCR  ...   0.7422        1.0000
+1          original  Tesseract vs PaddleOCR  ...   1.0000        1.0000
+2          original      Tesseract vs docTR  ...   0.3125        1.0000
+3   ruido_gaussiano    Tesseract vs EasyOCR  ...   0.8438        1.0000
+4   ruido_gaussiano  Tesseract vs PaddleOCR  ...   0.4609        1.0000
+5   ruido_gaussiano      Tesseract vs docTR  ...   0.1562        1.0000
+6       sal_pimenta    Tesseract vs EasyOCR  ...   0.3125        1.0000
+7       sal_pimenta  Tesseract vs PaddleOCR  ...   0.5625        1.0000
+8       sal_pimenta      Tesseract vs docTR  ...   0.8438        1.0000
+9    rotacao_5graus    Tesseract vs EasyOCR  ...   0.7422        1.0000
+10   rotacao_5graus  Tesseract vs PaddleOCR  ...   0.1484        1.0000
+11   rotacao_5graus      Tesseract vs docTR  ...   0.4609        1.0000
+12  baixa_resolucao    Tesseract vs EasyOCR  ...   0.0156        0.2344
+13  baixa_resolucao  Tesseract vs PaddleOCR  ...   0.9453        1.0000
+14  baixa_resolucao      Tesseract vs docTR  ...   0.9453        1.0000
+
+[15 rows x 6 columns]
+                                  grupo hipotese metrica                                comparacao  n  p_bruto  media_dif  mediana_dif  ic95_inf  ic95_sup  p_bonferroni
+0                                 todos       H1     cer            Tesseract < EasyOCR (original)  8   0.6797     0.0199       0.0420   -0.0513    0.0886        1.0000
+1                                 todos       H1     cer            PaddleOCR < EasyOCR (original)  8   0.7266    -0.0395       0.0391   -0.2014    0.0649        1.0000
+2                                 todos       H2     cer  perda por rotação: Tesseract > PaddleOCR  8   0.2305     0.0383       0.0214   -0.0333    0.1072        0.9219
+3                                 todos       H2     cer    perda por rotação: EasyOCR > PaddleOCR  8   0.2305     0.2260       0.0349   -0.0349    0.5176        0.9219
+4                                 todos       H1     wer            Tesseract < EasyOCR (original)  8   0.0078    -0.0640      -0.0419   -0.1084   -0.0254        0.0312
+5                                 todos       H1     wer            PaddleOCR < EasyOCR (original)  8   0.0078    -0.0725      -0.0466   -0.1238   -0.0305        0.0312
+6                                 todos       H2     wer  perda por rotação: Tesseract > PaddleOCR  8   0.1250     0.0538       0.0198    0.0038    0.1102        0.5000
+7                                 todos       H2     wer    perda por rotação: EasyOCR > PaddleOCR  8   0.3203     0.2582      -0.0015    0.0392    0.5347        1.0000
+8   exploratorio:real_juridico_provavel       H1     cer            Tesseract < EasyOCR (original)  2      NaN        NaN          NaN       NaN       NaN           NaN
+9   exploratorio:real_juridico_provavel       H1     cer            PaddleOCR < EasyOCR (original)  2      NaN        NaN          NaN       NaN       NaN           NaN
+10  exploratorio:real_juridico_provavel       H2     cer  perda por rotação: Tesseract > PaddleOCR  2      NaN        NaN          NaN       NaN       NaN           NaN
+11  exploratorio:real_juridico_provavel       H2     cer    perda por rotação: EasyOCR > PaddleOCR  2      NaN        NaN          NaN       NaN       NaN           NaN
+12  exploratorio:real_juridico_provavel       H1     wer            Tesseract < EasyOCR (original)  2      NaN        NaN          NaN       NaN       NaN           NaN
+13  exploratorio:real_juridico_provavel       H1     wer            PaddleOCR < EasyOCR (original)  2      NaN        NaN          NaN       NaN       NaN           NaN
+14  exploratorio:real_juridico_provavel       H2     wer  perda por rotação: Tesseract > PaddleOCR  2      NaN        NaN          NaN       NaN       NaN           NaN
+15  exploratorio:real_juridico_provavel       H2     wer    perda por rotação: EasyOCR > PaddleOCR  2      NaN        NaN          NaN       NaN       NaN           NaN
+16              exploratorio:real_outro       H1     cer            Tesseract < EasyOCR (original)  3      NaN        NaN          NaN       NaN       NaN           NaN
+17              exploratorio:real_outro       H1     cer            PaddleOCR < EasyOCR (original)  3      NaN        NaN          NaN       NaN       NaN           NaN
+18              exploratorio:real_outro       H2     cer  perda por rotação: Tesseract > PaddleOCR  3      NaN        NaN          NaN       NaN       NaN           NaN
+19              exploratorio:real_outro       H2     cer    perda por rotação: EasyOCR > PaddleOCR  3      NaN        NaN          NaN       NaN       NaN           NaN
+20              exploratorio:real_outro       H1     wer            Tesseract < EasyOCR (original)  3      NaN        NaN          NaN       NaN       NaN           NaN
+21              exploratorio:real_outro       H1     wer            PaddleOCR < EasyOCR (original)  3      NaN        NaN          NaN       NaN       NaN           NaN
+22              exploratorio:real_outro       H2     wer  perda por rotação: Tesseract > PaddleOCR  3      NaN        NaN          NaN       NaN       NaN           NaN
+23              exploratorio:real_outro       H2     wer    perda por rotação: EasyOCR > PaddleOCR  3      NaN        NaN          NaN       NaN       NaN           NaN
+24   exploratorio:sintetico_linha_unica       H1     cer            Tesseract < EasyOCR (original)  3      NaN        NaN          NaN       NaN       NaN           NaN
+25   exploratorio:sintetico_linha_unica       H1     cer            PaddleOCR < EasyOCR (original)  3      NaN        NaN          NaN       NaN       NaN           NaN
+26   exploratorio:sintetico_linha_unica       H2     cer  perda por rotação: Tesseract > PaddleOCR  3      NaN        NaN          NaN       NaN       NaN           NaN
+27   exploratorio:sintetico_linha_unica       H2     cer    perda por rotação: EasyOCR > PaddleOCR  3      NaN        NaN          NaN       NaN       NaN           NaN
+28   exploratorio:sintetico_linha_unica       H1     wer            Tesseract < EasyOCR (original)  3      NaN        NaN          NaN       NaN       NaN           NaN
+29   exploratorio:sintetico_linha_unica       H1     wer            PaddleOCR < EasyOCR (original)  3      NaN        NaN          NaN       NaN       NaN           NaN
+30   exploratorio:sintetico_linha_unica       H2     wer  perda por rotação: Tesseract > PaddleOCR  3      NaN        NaN          NaN       NaN       NaN           NaN
+31   exploratorio:sintetico_linha_unica       H2     wer    perda por rotação: EasyOCR > PaddleOCR  3      NaN        NaN          NaN       NaN       NaN           NaN
+
+real	38m6.959s
+user	227m13.717s
+sys	15m13.996s
+== RUN_DONE ==
+data:
+total 20
+drwxr-xr-x 4 juliafalchi juliafalchi 4096 Nov 10 20:40 .
+drwxr-xr-x 4 juliafalchi juliafalchi 4096 Nov 10 20:40 ..
+drwxr-xr-x 2 juliafalchi juliafalchi 4096 Nov 10 20:40 gt
+drwxr-xr-x 2 juliafalchi juliafalchi 4096 Nov 10 20:40 images
+-rw-r--r-- 1 juliafalchi juliafalchi  418 Nov 10 20:40 manifest.csv
+
+resultados:
+total 112
+drwxr-xr-x 2 juliafalchi juliafalchi  4096 Nov 10 21:18 .
+drwxr-xr-x 4 juliafalchi juliafalchi  4096 Nov 10 20:40 ..
+-rw-r--r-- 1 juliafalchi juliafalchi   488 Nov 10 21:18 ambiente.json
+-rw-r--r-- 1 juliafalchi juliafalchi 64131 Nov 10 21:18 cer_por_condicao.png
+-rw-r--r-- 1 juliafalchi juliafalchi  2000 Nov 10 21:18 ic_bootstrap.csv
+-rw-r--r-- 1 juliafalchi juliafalchi 15924 Nov 10 21:18 resultados.csv
+-rw-r--r-- 1 juliafalchi juliafalchi  1259 Nov 10 21:18 resumo.csv
+-rw-r--r-- 1 juliafalchi juliafalchi   954 Nov 10 21:18 resumo_por_tipo.csv
+-rw-r--r-- 1 juliafalchi juliafalchi  2839 Nov 10 21:18 testes_H1_H2.csv
+-rw-r--r-- 1 juliafalchi juliafalchi   887 Nov 10 21:18 testes_pareados.csv

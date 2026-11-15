@@ -1,0 +1,67 @@
+-
+
+Em matemática, catenária é à curva assumida por uma corrente ou cabo flexivel suspensa fixa
+da apenas por suas extremidades € sujeita somente à força de seu próprio peso (gravidade). A
+
+curva catenária tem um formato semelhante à letra U ou a um arco de parábola e é bastante €
+omum, estando presente, por exemplo, no design de alguns arcos arquitetônicos.
+
+A palavra «“catenária" vem do Latim catena, que significa corrente. christiaan Huygens foi o pio
+neiro no uso do termo catenária em uma correspondência com Gottfried Leibniz em 1690.
+
+o problema de descrever matematicamente a curva catenária foi proposto, oficialmente, por la
+kob Bernoulli, que, em 1690 no Acta Eruditorum, periódico cientifico da época, lançou o desafio:
+“E agora vamos propor este problema: encontrar a curva formada por um fio pendente, livrem
+ente suspenso à partir de dois pontos fixos”. Anteriormente, Galileu Galilei já havia demonstrad
+o interesse no problema € propôs que à curva, devido à sua aparência, seria aproximadamente
+uma parábola. No entanto, em 1646 Christiaan Huygens, aos 17 anos, demonstrou que a caten
+ária não poderia ser uma parábola. Demonstração realizada também por Joachim jungius em 1
+627, divulgada, contudo, postumamente, em 1669.
+
+As resoluções corretas para O problema, apresentadas por Gottfried Leibniz, Huygens e johann
+Bernoulli, foram publicadas em junho de 1691 no Acta Eruditorum.
+
+Na arquitetura, O pioneiro à propor a curva catenária no design de arcos foi o cientista Robert H
+ooke. Motivado, p: reconstrução da Catedral de São Paulo, em Londres, buscava O formato ide
+al para à const! “de arcos, feito com a menor quantidade possivel de materiais e com boa €
+stabilidade. EM 1671 anunciou à The Royal society que havia descoberto à maneira ideal de co
+nstruir arcos, sem, no entanto, dizer qual seria. EM 1675, publicou no apêndice do seu livro “A
+Description of Helioscopes and Some other Instruments” um anagrama encriptado que revelari
+a, nas suas palavras, “a verdadeira forma matemática e mecânica para a construção de arcos
+de todos Os tipos”, no entanto, não divulgou à resolução do anagrama enquanto vivo. somente
+em 1705, dois anos após seu falecimento, O responsável pelo espólio de Hooke publicou à soluç
+ão: “ut pendet continuum flexile, sic stabit contiguum rigidum inversum”, o que significa “Assim
+como uma forma flexivel e continua fica pendurada, quando invertida, permanecerá contiguam
+ente rígida”.
+
+A equação da catenária em coordenadas cartesianas é dada pelo cosseno hiperbólico e à sua €
+quivalente exponencial:
+
+O MATH
+
+na qual o parâmetro relaciona à componente horizontal da tensão () com O peso por unidade d
+e comprimento O MATH
+
+A equação de whewell é:
+CMATH
+
+na qual O MATH é o comprimento de arco e O MATH O ângulo entre à reta tangente à curva
+eo eixo O MATH
+
+A equação de cesãro é:
+
+O MATH
+
+na qual O MATH é a curvatura.
+A equação do raio de curvatura é:
+O MATH
+
+propriedades
+
+Quando uma parábola rola sem deslizar sobre à reta tangente à sua curva, à rolete traçada pel
+o seu foco (denominado gerador ou polo) é uma catenária.
+
+A envolvente de uma catenária é uma tractriz.
+
+Rodas em forma de qualquer polígono regular, com exceção do triângulo, conseguem rolar sem
+saltar em uma superficie constituída por saliências de catenárias invertidas, desde que as dime
